@@ -6,31 +6,39 @@ public class PlayerThrow : MonoBehaviour
 {
 
     [SerializeField] GameObject gunPrefab;
+    [SerializeField] GameObject cursor;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject playerArmEnd;
     [SerializeField] float gunSpeed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+        //Arm Rotation
+        Vector3 angle = cursor.transform.position - player.transform.position;
+        float rotated = Mathf.Atan2(angle.y, angle.x) * Mathf.Rad2Deg;
+        player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotated);
+
+        //Click to shoot
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            float distance = angle.magnitude;
+            Vector2 direction = angle / distance;
+            direction.Normalize();
+            Shoot(direction, rotated);
         }
+
     }
 
-    void Shoot()
+    void Shoot(Vector2 direction, float rotated)
     {
+        //Throwing Gun
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        var bullet = Instantiate(gunPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-
-        bullet.GetComponent<Rigidbody2D>().velocity = (mousePos - transform.position).normalized * gunSpeed;
-
-        Destroy(bullet, 5);
+        var bullet = Instantiate(gunPrefab) as GameObject;
+        bullet.transform.position = playerArmEnd.transform.position;
+        bullet.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotated);
+        bullet.GetComponent<Rigidbody2D>().velocity = direction * gunSpeed;
+        Destroy(bullet, 1);
     }
 }
