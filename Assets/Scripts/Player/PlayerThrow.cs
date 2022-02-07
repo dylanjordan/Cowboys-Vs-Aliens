@@ -39,6 +39,6 @@ public class PlayerThrow : MonoBehaviour
         bullet.transform.position = playerArmEnd.transform.position;
         bullet.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotated);
         bullet.GetComponent<Rigidbody2D>().velocity = direction * gunSpeed;
-        Destroy(bullet, 1);
+        Destroy(bullet, 5);
     }
 }
