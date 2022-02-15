@@ -21,7 +21,7 @@ public class PlayerThrow : MonoBehaviour
         player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotated);
 
         //Click to shoot
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0))
         {
             float distance = angle.magnitude;
             Vector2 direction = angle / distance;
@@ -39,6 +39,6 @@ public class PlayerThrow : MonoBehaviour
         bullet.transform.position = playerArmEnd.transform.position;
         bullet.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotated);
         bullet.GetComponent<Rigidbody2D>().velocity = direction * gunSpeed;
-        Destroy(bullet, 5);
+        Destroy(bullet, 10);
     }
 }

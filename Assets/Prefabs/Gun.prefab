@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5377066212106900432}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3103062153817401631}
   - component: {fileID: 9080806438079073999}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3751710356923101050}
   - component: {fileID: 3751710356923101051}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,9 +208,10 @@ GameObject:
   - component: {fileID: 3751710357652918604}
   - component: {fileID: 3751710357652918605}
   - component: {fileID: -9089444533683547664}
-  m_Layer: 3
+  - component: {fileID: 1076817867141104387}
+  m_Layer: 6
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +243,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -277,6 +278,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6102625, y: 0.49696675}
   m_EdgeRadius: 0
+--- !u!114 &1076817867141104387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3751710357652918603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932f0e8cf6003ac4ea8127ca712f2d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerPos: {fileID: 1946438360568988067, guid: 79451618c3f301c4fbc16ca06056e692, type: 3}
+  _gunPos: {fileID: 3751710357652918603}
+  _rb: {fileID: 3751710357652918605}
+  recalling: 0
 --- !u!1 &3751710357669817808
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3751710357669817809}
   - component: {fileID: 3751710357669817810}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
