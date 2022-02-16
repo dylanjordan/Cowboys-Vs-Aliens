@@ -21,6 +21,7 @@ public class Gun : MonoBehaviour
     void Start()
     {
         //Standard Biz
+        //Find the player in the game and assign it to this variable
         _playerPos = GameObject.Find("Player");
         _gunPos.GetComponent<GameObject>();
         _rb.GetComponent<Rigidbody2D>();
