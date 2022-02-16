@@ -55,7 +55,7 @@ public class Gun : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //If the gun collides with something, start recalling
-        if (collision.collider.tag == "Target" || collision.collider.tag == "Ground")
+        if (collision.collider.tag != "Player")
         {
             Debug.Log("Come Here!");
             recalling = true;
