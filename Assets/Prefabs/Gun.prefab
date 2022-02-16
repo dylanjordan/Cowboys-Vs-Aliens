@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3751710357652918604}
   - component: {fileID: 3751710357652918605}
-  - component: {fileID: -9089444533683547664}
+  - component: {fileID: 5391098783162355430}
   - component: {fileID: 1076817867141104387}
   m_Layer: 6
   m_Name: Gun
@@ -252,8 +252,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-9089444533683547664
-BoxCollider2D:
+--- !u!58 &5391098783162355430
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -265,19 +265,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19486874, y: 0.024925098}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.19319916, y: 0.046836138}
   serializedVersion: 2
-  m_Size: {x: 0.6102625, y: 0.49696675}
-  m_EdgeRadius: 0
+  m_Radius: 0.35363698
 --- !u!114 &1076817867141104387
 MonoBehaviour:
   m_ObjectHideFlags: 0
