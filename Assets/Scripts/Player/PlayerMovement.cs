@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //Properties of the player
     Transform trans;
     public Rigidbody2D body;
 
+    //Movement speed and jump force
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
 
+    //Some bools for movement
     private bool jumpInput;
     private bool isGrounded;
     private bool isWalking;
@@ -62,11 +64,13 @@ public class PlayerMovement : MonoBehaviour
             isWalking = true;
         }
     }
-        void Jump()
+
+    void Jump()
     {
         body.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         isGrounded = false;
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Ground")

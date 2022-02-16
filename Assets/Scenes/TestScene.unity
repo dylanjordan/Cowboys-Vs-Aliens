@@ -840,6 +840,10 @@ PrefabInstance:
       propertyPath: gunSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6092351042980611580, guid: 79451618c3f301c4fbc16ca06056e692, type: 3}
+      propertyPath: Throwable
+      value: 
+      objectReference: {fileID: 1076817867141104387, guid: 93eaef0a502efb5489f773681ffd83ee, type: 3}
     - target: {fileID: 6092351042980611581, guid: 79451618c3f301c4fbc16ca06056e692, type: 3}
       propertyPath: m_Name
       value: Player
