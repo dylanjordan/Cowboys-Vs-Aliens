@@ -37,7 +37,7 @@ public class Gun : MonoBehaviour
             Vector3 dirToPlayer = (_playerPos.transform.position - transform.position).normalized;
 
             //Go to player
-            _rb.velocity = dirToPlayer * 20f;
+            _rb.velocity = dirToPlayer * 30f;
         }
 
         //If enough time passes, recall gun
