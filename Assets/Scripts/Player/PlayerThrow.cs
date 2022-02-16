@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerThrow : MonoBehaviour
 {
 
-    [SerializeField] Gun Throwable;
     //Gun Prefab
     [SerializeField] GameObject gunPrefab;
 
@@ -15,6 +14,9 @@ public class PlayerThrow : MonoBehaviour
     //Player location and firing location
     [SerializeField] GameObject player;
     [SerializeField] GameObject playerArmEnd;
+
+    //Decorative handgun
+    [SerializeField] GameObject fakeGun;
 
     //Player's firing speed
     [SerializeField] float gunSpeed;
@@ -44,12 +46,16 @@ public class PlayerThrow : MonoBehaviour
         //If the gun prefab exists in the gameworld
         if (GameObject.Find("Gun(Clone)") != null)
         {
+            //Get rid of the gun in the players hand 
+            fakeGun.SetActive(false);
             //Dont let the player throw another
             canThrow = false;
         }
         //If the gun prefab doesnt exist in the gameworld
         else if (GameObject.Find("Gun(Clone)") == null)
         {
+            //Make the gun in the players hand appear
+            fakeGun.SetActive(true);
             //Let the player throw one
             canThrow = true;
         }

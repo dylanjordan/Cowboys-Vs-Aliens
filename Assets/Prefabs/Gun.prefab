@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3103062153817401631}
   - component: {fileID: 9080806438079073999}
   m_Layer: 6
-  m_Name: Square (2)
+  m_Name: GunComponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 3751710356923101050}
   - component: {fileID: 3751710356923101051}
   m_Layer: 6
-  m_Name: Square (1)
+  m_Name: GunComponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,10 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932f0e8cf6003ac4ea8127ca712f2d3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPos: {fileID: 1946438360568988067, guid: 79451618c3f301c4fbc16ca06056e692, type: 3}
   _gunPos: {fileID: 3751710357652918603}
   _rb: {fileID: 3751710357652918605}
-  recalling: 0
 --- !u!1 &3751710357669817808
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +303,7 @@ GameObject:
   - component: {fileID: 3751710357669817809}
   - component: {fileID: 3751710357669817810}
   m_Layer: 6
-  m_Name: Square
+  m_Name: GunComponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
