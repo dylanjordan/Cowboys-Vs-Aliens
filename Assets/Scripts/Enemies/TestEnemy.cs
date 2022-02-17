@@ -6,6 +6,7 @@ public class TestEnemy : MonoBehaviour
 {
     [SerializeField] TestHealthbar healthBarControl;
     [SerializeField] GameObject healthBar;
+    public ParticleSystem hitParticles;
     public int _enemyHealth = 10;
     public int _maxHealth = 10;
     public int _damageRecieved = 2;
@@ -27,6 +28,7 @@ public class TestEnemy : MonoBehaviour
     {
         if (collision.collider.tag == "Gun")
         {
+            Instantiate(hitParticles, transform.position, Quaternion.identity);
             healthBar.SetActive(true);
             TakeDamage();
             healthBarControl.SetHealth(_enemyHealth, _maxHealth);

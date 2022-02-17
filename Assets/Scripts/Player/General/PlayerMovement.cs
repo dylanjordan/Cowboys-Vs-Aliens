@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     Transform trans;
     public Rigidbody2D body;
 
+    //Getting the arm for a visual fix
+    public GameObject playerArm;
+
     //Movement speed and jump force
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         trans = GetComponent<Transform>();
         body = GetComponent<Rigidbody2D>();
+        playerArm = GameObject.Find("Arm");
     }
 
     // Update is called once per frame
@@ -55,12 +59,15 @@ public class PlayerMovement : MonoBehaviour
         {
             trans.position += transform.right * Time.deltaTime * speed;
             trans.rotation = Quaternion.Euler(0, 180, 0);
+            //Rotates the arm to match the player
+            playerArm.transform.localScale = new Vector3(1, -1, 1);
             isWalking = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
             trans.position += transform.right * Time.deltaTime * speed;
             trans.rotation = Quaternion.Euler(0, 0, 0);
+            playerArm.transform.localScale = new Vector3(1, 1, 1);
             isWalking = true;
         }
     }

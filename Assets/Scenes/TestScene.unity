@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 6552225}
   - component: {fileID: 6552227}
   - component: {fileID: 6552226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 205019602}
   - component: {fileID: 205019603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1325,6 +1325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 1185953457}
+  playerArm: {fileID: 1808226297}
   speed: 10
   jumpForce: 20
 --- !u!212 &1185953459
@@ -1405,7 +1406,7 @@ GameObject:
   - component: {fileID: 1206583084}
   - component: {fileID: 1206583083}
   - component: {fileID: 1206583082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1426,6 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarControl: {fileID: 1682922574}
   healthBar: {fileID: 205019601}
+  hitParticles: {fileID: 8591682493932031579, guid: 9177601b0bcd3fe4b809cbc4787fa0a3, type: 3}
   _enemyHealth: 10
   _maxHealth: 10
   _damageRecieved: 2
@@ -1674,7 +1676,7 @@ GameObject:
   - component: {fileID: 1577679002}
   - component: {fileID: 1577679004}
   - component: {fileID: 1577679003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1862,7 +1864,7 @@ GameObject:
   - component: {fileID: 1682922571}
   - component: {fileID: 1682922573}
   - component: {fileID: 1682922574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
