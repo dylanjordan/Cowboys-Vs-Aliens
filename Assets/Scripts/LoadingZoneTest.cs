@@ -9,6 +9,9 @@ public class LoadingZoneTest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(sceneToLoad);
+        if (collision.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
 }
