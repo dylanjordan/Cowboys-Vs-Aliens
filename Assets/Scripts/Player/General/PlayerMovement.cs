@@ -20,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool isWalking;
 
+    //Can enter a shop
+    private bool canEnterShop = false;
+    private bool shopInput = false;
+
     private float playerGravity = 7f;
 
     // Start is called before the first frame update
@@ -35,13 +39,18 @@ public class PlayerMovement : MonoBehaviour
     {
         Walk();
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && !canEnterShop)
         {
             jumpInput = true;
+        }
+        if (Input.GetKeyDown(KeyCode.W) && canEnterShop)
+        {
+            shopInput = true;
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
             jumpInput = false;
+            shopInput = false;
         }
     }
 
@@ -83,6 +92,11 @@ public class PlayerMovement : MonoBehaviour
         return speed;
     }
 
+    public bool GetShopInput()
+    {
+        return shopInput;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Ground")
@@ -94,6 +108,22 @@ public class PlayerMovement : MonoBehaviour
                     isGrounded = true;
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Shop"))
+        {
+            canEnterShop = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Shop"))
+        {
+            canEnterShop = false;
         }
     }
 }

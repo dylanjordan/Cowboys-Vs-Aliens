@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadingZoneTest : MonoBehaviour
+public class LoadZone : MonoBehaviour
 {
     public int sceneToLoad = 0;
 

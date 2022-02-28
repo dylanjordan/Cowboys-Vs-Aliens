@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 516987119}
   m_Layer: 0
   m_Name: TempSaloon
-  m_TagString: Untagged
+  m_TagString: Shop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,6 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed597378b04834b44826fe36086c569b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 1984938783}
+  shopToLoad: 2
   indicator: {fileID: 538111522}
 --- !u!1 &538111522
 GameObject:
@@ -1021,6 +1023,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8970681917763513815, guid: 2a87331a7275a3643949bfefa3b50e8f, type: 3}
   m_PrefabInstance: {fileID: 912053145}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1984938783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8970681917763513803, guid: 2a87331a7275a3643949bfefa3b50e8f, type: 3}
+  m_PrefabInstance: {fileID: 912053145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984938782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cdc3096d0d262646b4bb3a7fcc7f536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2140765991
 GameObject:
   m_ObjectHideFlags: 0
