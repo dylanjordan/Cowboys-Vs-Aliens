@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Cursor : MonoBehaviour
 {
+    PauseMenu pauseMenu;
+
     private void Start()
     {
         UnityEngine.Cursor.visible = false;
@@ -12,7 +14,10 @@ public class Cursor : MonoBehaviour
 
     private void Update()
     {
-        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos;
+        if (!PauseMenu.isPaused)
+        {
+            Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = cursorPos;
+        }
     }
 }

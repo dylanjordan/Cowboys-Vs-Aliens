@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerThrow : MonoBehaviour
 {
-
+    PauseMenu pauseMenu;
     //Gun Prefab
     [SerializeField] GameObject gunPrefab;
 
@@ -27,38 +27,42 @@ public class PlayerThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Arm Rotation
-        Vector3 angle = cursor.transform.position - player.transform.position;
-        float rotated = Mathf.Atan2(angle.y, angle.x) * Mathf.Rad2Deg;
-        player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotated);
+        if (!PauseMenu.isPaused)
+        {
+            //Arm Rotation
+            Vector3 angle = cursor.transform.position - player.transform.position;
+            float rotated = Mathf.Atan2(angle.y, angle.x) * Mathf.Rad2Deg;
+            player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotated);
 
-        //Click to shoot
-        if (Input.GetMouseButtonDown(0) && canThrow)
-        {
-            //Get the direction and angle for the gun and Throw eeet
-            float distance = angle.magnitude;
-            Vector2 direction = angle / distance;
-            direction.Normalize();
-            Shoot(direction, rotated);
-            canThrow = false;
-        }
+            //Click to shoot
+            if (Input.GetMouseButtonDown(0) && canThrow)
+            {
+                //Get the direction and angle for the gun and Throw eeet
+                float distance = angle.magnitude;
+                Vector2 direction = angle / distance;
+                direction.Normalize();
+                Shoot(direction, rotated);
+                canThrow = false;
+            }
 
-        //If the gun prefab exists in the gameworld
-        if (GameObject.Find("Gun(Clone)") != null)
-        {
-            //Get rid of the gun in the players hand 
-            fakeGun.SetActive(false);
-            //Dont let the player throw another
-            canThrow = false;
+            //If the gun prefab exists in the gameworld
+            if (GameObject.Find("Gun(Clone)") != null)
+            {
+                //Get rid of the gun in the players hand 
+                fakeGun.SetActive(false);
+                //Dont let the player throw another
+                canThrow = false;
+            }
+            //If the gun prefab doesnt exist in the gameworld
+            else if (GameObject.Find("Gun(Clone)") == null)
+            {
+                //Make the gun in the players hand appear
+                fakeGun.SetActive(true);
+                //Let the player throw one
+                canThrow = true;
+            }
         }
-        //If the gun prefab doesnt exist in the gameworld
-        else if (GameObject.Find("Gun(Clone)") == null)
-        {
-            //Make the gun in the players hand appear
-            fakeGun.SetActive(true);
-            //Let the player throw one
-            canThrow = true;
-        }
+        
     }
 
     //Shoots weapon

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    PauseMenu pauseMenu;
     //Properties of the player
     Transform trans;
     public Rigidbody2D body;
@@ -33,16 +34,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();
+        if (!PauseMenu.isPaused)
+        {
+            Walk();
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            jumpInput = true;
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                jumpInput = true;
+            }
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                jumpInput = false;
+            }
         }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            jumpInput = false;
-        }
+        
     }
 
     void FixedUpdate()
