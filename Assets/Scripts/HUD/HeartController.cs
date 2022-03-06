@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class HeartController : MonoBehaviour
 {
-    public int playerHealth;
+    Player player = new Player();
 
     [SerializeField] private Image[] hearts;
 
     private void Start()
     {
+        player = GetComponent<Player>();
         HeartUpdater();
     }
 
@@ -18,7 +19,7 @@ public class HeartController : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < playerHealth)
+            if (i < player._currentHealth)
             {
                 hearts[i].color = Color.red;
             }
