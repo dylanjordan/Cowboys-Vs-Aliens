@@ -20,12 +20,12 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerObj.transform.position.x - trans.position.x > 4)
+        if (playerObj.transform.position.x - trans.position.x > 5)
         {
             trans.position += transform.right * Time.deltaTime * player.GetSpeed();
         }
 
-        if (playerObj.transform.position.x - trans.position.x < -4)
+        if (playerObj.transform.position.x - trans.position.x < -5)
         {
             trans.position -= transform.right * Time.deltaTime * player.GetSpeed();
         }
