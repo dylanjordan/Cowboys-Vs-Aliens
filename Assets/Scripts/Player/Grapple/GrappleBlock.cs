@@ -45,6 +45,10 @@ public class GrappleBlock : MonoBehaviour
         {
             playerSpring.enabled = false;
         }
+        if (playerSpring.distance >= 5)
+        {
+            playerSpring.enabled = false;
+        }
     }
 
     public void OnMouseExit()
