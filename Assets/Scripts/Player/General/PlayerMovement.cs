@@ -14,10 +14,11 @@ public class PlayerMovement : MonoBehaviour
     //Movement speed and jump force
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
+    [SerializeField] private LayerMask jumpableGround;
 
+    private BoxCollider2D _coll;
     //Some bools for movement
     private bool jumpInput;
-    private bool isGrounded;
     private bool isWalking;
 
     //Can enter a shop
@@ -26,9 +27,11 @@ public class PlayerMovement : MonoBehaviour
 
     private float playerGravity = 7f;
 
+
     // Start is called before the first frame update
     void Start()
     {
+        _coll = GetComponent<BoxCollider2D>();
         trans = GetComponent<Transform>();
         body = GetComponent<Rigidbody2D>();
         playerArm = GameObject.Find("Arm");
@@ -53,12 +56,12 @@ public class PlayerMovement : MonoBehaviour
             shopInput = false;
         }
 
-        Debug.Log(isGrounded);
+        Debug.Log(isGrounded());
     }
 
     void FixedUpdate()
     {
-        if (jumpInput && isGrounded)
+        if (jumpInput && isGrounded())
         {
             Jump();
         }
@@ -86,7 +89,6 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         body.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-        isGrounded = false;
     }
 
     public float GetSpeed()
@@ -98,21 +100,24 @@ public class PlayerMovement : MonoBehaviour
     {
         return shopInput;
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.collider.tag == "Ground")
+    //    {
+    //        for (int i = 0; i < collision.contacts.Length; i++)
+    //        {
+    //            if (collision.contacts[0].normal.y > 0.5)
+    //            {
+    //                isGrounded = true;
+    //            }
+    //        }
+    //    }
+    //}
+    private bool isGrounded()
     {
-        if (collision.collider.tag == "Ground")
-        {
-            for (int i = 0; i < collision.contacts.Length; i++)
-            {
-                if (collision.contacts[0].normal.y > 0.5)
-                {
-                    isGrounded = true;
-                }
-            }
-        }
+        float extraHeightText = .1f;
+        return Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, extraHeightText, jumpableGround);
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Shop"))
