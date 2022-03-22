@@ -52,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
             jumpInput = false;
             shopInput = false;
         }
+
+        Debug.Log(isGrounded);
     }
 
     void FixedUpdate()
@@ -103,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         {
             for (int i = 0; i < collision.contacts.Length; i++)
             {
-                if (collision.contacts[i].normal.y > 0.5)
+                if (collision.contacts[0].normal.y > 0.5)
                 {
                     isGrounded = true;
                 }
