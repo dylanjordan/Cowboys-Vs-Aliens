@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gunPos: {fileID: 3751710357652918603}
   _rb: {fileID: 3751710357652918605}
+  _attackSound: {fileID: 8300000, guid: 9373530ecb639744790a15bacba99aba, type: 3}
 --- !u!1 &3751710357669817808
 GameObject:
   m_ObjectHideFlags: 0

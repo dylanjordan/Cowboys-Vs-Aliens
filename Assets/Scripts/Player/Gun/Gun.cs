@@ -11,6 +11,9 @@ public class Gun : MonoBehaviour
     //Gun rigidbody
     public Rigidbody2D _rb;
 
+    //Collision Audio
+    public AudioClip _attackSound;
+
     //Is the gun recalling
     bool recalling = false;
 
@@ -58,6 +61,7 @@ public class Gun : MonoBehaviour
         if (collision.collider.tag != "Player")
         {
             Debug.Log("Come Here!");
+            AudioSource.PlayClipAtPoint(_attackSound, transform.position);
             recalling = true;
         }
         //If the gun collides with the player, Disappear
