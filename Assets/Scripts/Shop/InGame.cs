@@ -31,7 +31,6 @@ public class InGame : MonoBehaviour
         {
             if (_player.GetShopInput())
             {
-                Debug.Log("yer");
                 SceneManager.LoadScene(shopToLoad);
             }
         }
