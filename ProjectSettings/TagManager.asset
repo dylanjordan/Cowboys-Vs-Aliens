@@ -9,6 +9,7 @@ TagManager:
   - Gun
   - Enemy
   - Shop
+  - Cursor
   layers:
   - Default
   - TransparentFX

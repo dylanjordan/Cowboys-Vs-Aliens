@@ -118,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
         float extraHeightText = .1f;
         return Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, extraHeightText, jumpableGround);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Shop"))
