@@ -8,8 +8,8 @@ TagManager:
   - Target
   - Gun
   - Enemy
-  - Shop
   - Cursor
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -21,7 +21,7 @@ TagManager:
   - Ground
   - Enemy
   - Grapple
-  - Wall
+  - 
   - 
   - 
   - 
