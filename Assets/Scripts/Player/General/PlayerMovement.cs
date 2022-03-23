@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    PauseMenu pauseMenu;
     //Properties of the player
     Transform trans;
     public Rigidbody2D body;
