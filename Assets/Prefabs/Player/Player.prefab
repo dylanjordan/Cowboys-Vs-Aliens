@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 5209961946109554306}
   - component: {fileID: 5209961946109554309}
   - component: {fileID: 5209961946109554311}
-  - component: {fileID: 5209961946109554310}
+  - component: {fileID: 2399837332781398753}
   - component: {fileID: 5209961946109554307}
   - component: {fileID: 5209961946109554308}
   - component: {fileID: 5209961946109554329}
@@ -420,8 +420,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &5209961946109554310
-CapsuleCollider2D:
+--- !u!61 &2399837332781398753
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -433,9 +433,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.047554728}
-  m_Size: {x: 0.7107307, y: 3.2048912}
-  m_Direction: 0
+  m_Offset: {x: 0.00000008940697, y: -0.028566241}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.87, y: 3.3}
+    newSize: {x: 0.87, y: 3.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.669084, y: 3.2428672}
+  m_EdgeRadius: 0
 --- !u!231 &5209961946109554307
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -472,6 +482,9 @@ MonoBehaviour:
   playerArm: {fileID: 5209961945550175677}
   speed: 10
   jumpForce: 25
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &5209961946109554329
 MonoBehaviour:
   m_ObjectHideFlags: 0
