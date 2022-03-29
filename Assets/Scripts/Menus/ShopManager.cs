@@ -11,6 +11,7 @@ public class ShopManager : MonoBehaviour
     public float coins; // change to ingame currency later
 
     public Text coinsText;
+    public GameObject NotEnoughMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class ShopManager : MonoBehaviour
 
         //Price(s)
         shopItems[2, 1] = 5;
-        shopItems[2, 2] = 10;
+        shopItems[2, 2] = 20;
         shopItems[2, 3] = 9;
 
     }
@@ -39,8 +40,24 @@ public class ShopManager : MonoBehaviour
             // remove amount of coins item costs
             coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
             // update coins text
-            coinsText.text = "Coins:" + coins.ToString();
-            
+            coinsText.text = "Coins:" + coins.ToString();  
         }
+    }
+
+    public void NotEnoughCoins()
+    {
+        StartCoroutine(NotEnoughMenuActive());
+    }
+
+    IEnumerator NotEnoughMenuActive()
+    {
+        GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+        if (coins < shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        {
+            Debug.Log("You do not have enough coins to buy this!");
+            NotEnoughMenu.SetActive(true);
+        }
+        yield return new WaitForSeconds(1.0f);
+        NotEnoughMenu.SetActive(false);
     }
 }
