@@ -5,10 +5,9 @@ using Pathfinding;
 
 public class SpaceShipAI : MonoBehaviour
 {
-    public Transform _player;
+    public Transform _player, _enemyGFX, shootPos;
 
-    public Transform _enemyGFX;
-
+    public GameObject _bulletPrefab;
     private Path _path;
 
     private Seeker _seeker;
@@ -18,10 +17,16 @@ public class SpaceShipAI : MonoBehaviour
     private int _currentWaypoint = 0;
 
     private bool _reachedEndOfPath = false;
+    private bool _isShooting = false;
+    private bool canShoot = true;
 
     public float _enemySpeed = 200f;
     public float _nextWaypointDistance = 2f;
+    public float _shootRange, _shootSpeed;
+    public float _timeBeforeNextShot = 1.0f;
+
     [SerializeField] public float _UpdatePathRate = .5f;
+    [SerializeField] public float _distanceVal = 5.0f;
     private void Awake()
     {
         _seeker = GetComponent<Seeker>();
@@ -31,7 +36,7 @@ public class SpaceShipAI : MonoBehaviour
     {
         InvokeRepeating("UpdatePath", 0f, _UpdatePathRate);
     }
-
+    
     private void UpdatePath()
     {
         if (_seeker.IsDone())
@@ -51,9 +56,21 @@ public class SpaceShipAI : MonoBehaviour
     
     private void FixedUpdate()
     {
-        FindPath();
+        float range = 15.0f;
+        if (Vector3.Distance(_player.position, transform.position) <= range || _isShooting)
+        {
+            FindPath();
+        }
 
-        UpdateRotation();
+        if (Vector3.Distance(_player.position, transform.position) <= _shootRange && canShoot)
+        {
+            _isShooting = true;
+            StartCoroutine(Shoot());
+        }
+        else
+        {
+            _isShooting = false;
+        }
     }
     private void FindPath()
     {
@@ -71,7 +88,7 @@ public class SpaceShipAI : MonoBehaviour
         {
             _reachedEndOfPath = false;
         }
-
+        
         Vector2 direction = ((Vector2)_path.vectorPath[_currentWaypoint] - _rb.position).normalized;
         Vector2 force = direction * _enemySpeed * Time.deltaTime;
 
@@ -83,16 +100,29 @@ public class SpaceShipAI : MonoBehaviour
         {
             _currentWaypoint++;
         }
+        if (_rb.velocity.x >= 0.01f && force.x > 0f)
+        {
+            _enemyGFX.localScale = new Vector3(-0.3f, 0.3f, 1f);
+        }
+        else if (_rb.velocity.x <= -0.0f && force.x < 0f)
+        {
+            _enemyGFX.localScale = new Vector3(0.3f, 0.3f, 1f);
+        }
     }
-    private void UpdateRotation()
+
+    IEnumerator Shoot()
     {
-        if (_rb.velocity.x >= 0.01f)
-        {
-            _enemyGFX.localScale = new Vector3(-0.25f, 0.25f, 1f);
-        }
-        else if (_rb.velocity.x <= -0.0f)
-        {
-            _enemyGFX.localScale = new Vector3(0.25f, 0.25f, 1f);
-        }
+        canShoot = false;
+        yield return new WaitForSeconds(_timeBeforeNextShot);
+        GameObject newBullet = Instantiate(_bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        newBullet.GetComponent<Rigidbody2D>().velocity = (_player.position - transform.position).normalized * _shootSpeed;
+        canShoot = true;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, _shootRange);
+    }
+
 }

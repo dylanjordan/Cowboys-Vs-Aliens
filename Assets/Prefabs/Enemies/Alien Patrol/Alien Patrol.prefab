@@ -156,11 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ac96190309a764c8c79d77a496ad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBarControl: {fileID: 5372307648898718414}
+  _healthBarControl: {fileID: 4902743876364833576}
   _healthBar: {fileID: 5372307648670592777}
   _hitParticles: {fileID: 8591682493932031579, guid: 9177601b0bcd3fe4b809cbc4787fa0a3, type: 3}
-  _enemyRb: {fileID: 0}
-  _enemyBoxCollider: {fileID: 0}
+  _enemyRb: {fileID: 5372307648178093247}
+  _enemyBoxCollider: {fileID: 5372307648178093252}
   _enemyHealth: 10
   _enemyMaxHealth: 10
   _enemySpeed: 1.5
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 5372307648898718417}
   - component: {fileID: 5372307648898718416}
   - component: {fileID: 5372307648898718419}
-  - component: {fileID: 5372307648898718414}
+  - component: {fileID: 4902743876364833576}
   m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5372307648898718414
+--- !u!114 &4902743876364833576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5372307648898718421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b2ee01d66ea3574288ff59fae4275eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 8396d6310b17cdf42965f474d8676f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 5372307648898718419}
