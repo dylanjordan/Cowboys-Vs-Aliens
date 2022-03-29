@@ -3,35 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class AlienPatrol : MonoBehaviour
 {
     [SerializeField] TestHealthbar _healthBarControl;
 
     [SerializeField] GameObject _healthBar;
 
-    [SerializeField] float _deathTimer = 0.3f;
-
-    Rigidbody2D _rb;
-
-    Transform _trans;
-
     public ParticleSystem _hitParticles;
+    public Rigidbody2D _enemyRb;
+    public BoxCollider2D _enemyBoxCollider;
 
     public float _enemyHealth = 10.0f;
     public float _enemyMaxHealth = 10.0f;
-    public float _enemySpeed = 1.5f;
+    public float _enemySpeed = 1f;
     public float _contactDamage = 0.5f;
-    public float _timer = 5f;
-
-    private float _timeSinceReveal = 0.0f;
-
-    private bool _movingLeft;
 
     public int _damageRecieved = 2;
+
     private void Awake()
     {
-        _trans = GetComponent<Transform>();
-        _rb = GetComponent<Rigidbody2D>();
+        _enemyRb = GetComponent<Rigidbody2D>();
+        _enemyBoxCollider = GetComponent<BoxCollider2D>();
     }
     private void Start()
     {
@@ -40,48 +32,54 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         UpdateEnemy();
-        Move();
-    }
-    private void Move()
-    {
-        if (_movingLeft)
+
+        if (IsFacingRight())
         {
-            transform.position += Vector3.left * Time.deltaTime * _enemySpeed;
+            _enemyRb.velocity = new Vector2(_enemySpeed, 0f);
         }
         else
         {
-            transform.position += Vector3.right * Time.deltaTime * _enemySpeed;
+            _enemyRb.velocity = new Vector2(-_enemySpeed, 0f);
         }
+    }
+
+    private bool IsFacingRight()
+    {
+        return transform.localScale.x > Mathf.Epsilon;
     }
     public void TakeDamage()
     {
         _enemyHealth -= _damageRecieved;
     }
 
-    public virtual void UpdateEnemy()
+    private void UpdateEnemy()
     {
         KillIfDead();
     }
 
-    public void ResetHealth()
+    private void ResetHealth()
     {
         _enemyHealth = _enemyMaxHealth;
     }
 
-    public void KillIfDead()
+    private void KillIfDead()
     {
         if (CheckIfDead())
         {
             Destroy(gameObject);
         }
     }
-    public bool CheckIfDead()
+    private bool CheckIfDead()
     {
         if (_enemyHealth <= 0.0f)
         {
             return true;
         }
         return false;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        transform.localScale = new Vector2(-(Mathf.Sign(_enemyRb.velocity.x)), transform.localScale.y);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -91,14 +89,6 @@ public class Enemy : MonoBehaviour
             _healthBar.SetActive(true);
             TakeDamage();
             _healthBarControl.SetHealth(_enemyHealth, _enemyMaxHealth);
-        }
-        if (collision.collider.tag == "Player")
-        {
-            _rb.velocity = new Vector2(0, _rb.velocity.y);
-        }
-        if (collision.gameObject.tag == "Wall")
-        {
-            _enemySpeed = _enemySpeed * -1;
         }
     }
 }

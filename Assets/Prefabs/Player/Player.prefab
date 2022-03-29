@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 5209961946109554307}
   - component: {fileID: 5209961946109554308}
   - component: {fileID: 5209961946109554329}
+  - component: {fileID: 2248820784302082840}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -504,6 +505,20 @@ MonoBehaviour:
   fakeGun: {fileID: 5209961946051673109}
   gunSpeed: 20
   canThrow: 1
+--- !u!114 &2248820784302082840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5209961946109554328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98582dbf1566ba14da62aa289ed97951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.7
+  lowJumpMultiplier: 3
 --- !u!1 &5209961946289527792
 GameObject:
   m_ObjectHideFlags: 0
