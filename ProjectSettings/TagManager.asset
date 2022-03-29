@@ -8,6 +8,7 @@ TagManager:
   - Target
   - Gun
   - Enemy
+  - Event
   layers:
   - Default
   - TransparentFX
