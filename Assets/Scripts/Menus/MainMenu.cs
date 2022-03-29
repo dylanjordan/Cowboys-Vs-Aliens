@@ -16,8 +16,15 @@ public class MainMenu : MonoBehaviour
     // function to close the game
     public void QuitGame()
     {
-        // to show it works without needing to build
-        Debug.Log("Exiting Game...");
+        Debug.Log("Exiting Game..."); // to show it works without needing to build
         Application.Quit();
+    }
+
+    // load game button, for now loads player into the town
+    public void LoadGame()
+    {
+        // can change update this later
+        SceneManager.LoadScene("Town");
+        Debug.Log("Traveling to the Town...");
     }
 }

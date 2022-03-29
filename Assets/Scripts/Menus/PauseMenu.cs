@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
-            {
+            { 
                 // press escape when paused -> back to game
                 ResumeGame();
             }
@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0.0f;
         isPaused = true;
-
+        
         if (settingsMenu.activeInHierarchy)
         {
             settingsMenu.SetActive(false);
