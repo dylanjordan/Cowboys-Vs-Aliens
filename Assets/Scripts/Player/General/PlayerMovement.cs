@@ -15,17 +15,24 @@ public class PlayerMovement : MonoBehaviour
     //Movement speed and jump force
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
+    [SerializeField] private LayerMask jumpableGround;
 
+    private BoxCollider2D _coll;
     //Some bools for movement
     private bool jumpInput;
-    private bool isGrounded;
     private bool isWalking;
 
+    //Can enter a shop
+    private bool canEnterShop = false;
+    private bool shopInput = false;
+
     private float playerGravity = 7f;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        _coll = GetComponent<BoxCollider2D>();
         trans = GetComponent<Transform>();
         body = GetComponent<Rigidbody2D>();
         playerArm = GameObject.Find("Arm");
@@ -34,25 +41,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PauseMenu.isPaused)
-        {
-            Walk();
+        Walk();
 
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                jumpInput = true;
-            }
-            if (Input.GetKeyUp(KeyCode.W))
-            {
-                jumpInput = false;
-            }
+        if (Input.GetKeyDown(KeyCode.W) && !canEnterShop)
+        {
+            jumpInput = true;
         }
-        
+        if (Input.GetKeyDown(KeyCode.W) && canEnterShop)
+        {
+            shopInput = true;
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            jumpInput = false;
+            shopInput = false;
+        }
+
+        Debug.Log(isGrounded());
     }
 
     void FixedUpdate()
     {
-        if (jumpInput && isGrounded)
+        if (jumpInput && isGrounded())
         {
             Jump();
         }
@@ -80,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         body.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-        isGrounded = false;
     }
 
     public float GetSpeed()
@@ -88,17 +97,43 @@ public class PlayerMovement : MonoBehaviour
         return speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public bool GetShopInput()
     {
-        if (collision.collider.tag == "Ground")
+        return shopInput;
+    }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.collider.tag == "Ground")
+    //    {
+    //        for (int i = 0; i < collision.contacts.Length; i++)
+    //        {
+    //            if (collision.contacts[0].normal.y > 0.5)
+    //            {
+    //                isGrounded = true;
+    //            }
+    //        }
+    //    }
+    //}
+    private bool isGrounded()
+    {
+        float extraHeightText = .1f;
+        return Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, extraHeightText, jumpableGround);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Shop"))
         {
-            for (int i = 0; i < collision.contacts.Length; i++)
-            {
-                if (collision.contacts[i].normal.y > 0.5)
-                {
-                    isGrounded = true;
-                }
-            }
+            canEnterShop = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Shop"))
+        {
+            canEnterShop = false;
         }
     }
 }

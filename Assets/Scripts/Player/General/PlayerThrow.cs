@@ -79,6 +79,6 @@ public class PlayerThrow : MonoBehaviour
         //Shoot it in the direction of the cursor
         bullet.GetComponent<Rigidbody2D>().velocity = direction * gunSpeed;
         //If it doesnt return to the player naturally (it gets blocked), destroy it
-        Destroy(bullet, 10);
+        Destroy(bullet, 7);
     }
 }
