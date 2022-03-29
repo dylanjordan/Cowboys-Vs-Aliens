@@ -158,18 +158,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthBarControl: {fileID: 5372307648898718414}
   _healthBar: {fileID: 5372307648670592777}
-  _deathTimer: 0.3
-  _rb: {fileID: 5372307648178093247}
   _hitParticles: {fileID: 8591682493932031579, guid: 9177601b0bcd3fe4b809cbc4787fa0a3, type: 3}
-  _groundCheck: {fileID: 5372307648178093246}
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  _enemyRb: {fileID: 0}
+  _enemyBoxCollider: {fileID: 0}
   _enemyHealth: 10
   _enemyMaxHealth: 10
   _enemySpeed: 1.5
   _contactDamage: 0.5
-  _mustPatrolArea: 0
   _damageRecieved: 2
 --- !u!50 &5372307648178093247
 Rigidbody2D:
@@ -306,7 +301,7 @@ GameObject:
   - component: {fileID: 5372307648670592775}
   - component: {fileID: 5372307648670592774}
   m_Layer: 8
-  m_Name: Panel
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

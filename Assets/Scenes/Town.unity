@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1772312976}
-  shopToLoad: 4
+  shopToLoad: 3
   indicator: {fileID: 538111522}
 --- !u!1 &538111522
 GameObject:
