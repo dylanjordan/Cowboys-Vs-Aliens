@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class SpaceShipAI : MonoBehaviour
 {
-    public Transform _player, _enemyGFX, shootPos;
+    public Transform _playerLocation, _playerModel,  _enemyGFX, shootPos;
 
     public GameObject _bulletPrefab;
     private Path _path;
@@ -41,7 +41,7 @@ public class SpaceShipAI : MonoBehaviour
     {
         if (_seeker.IsDone())
         {
-            _seeker.StartPath(_rb.position, _player.position, OnPathComplete);
+            _seeker.StartPath(_rb.position, _playerLocation.position, OnPathComplete);
         }
     }
 
@@ -57,12 +57,12 @@ public class SpaceShipAI : MonoBehaviour
     private void FixedUpdate()
     {
         float range = 15.0f;
-        if (Vector3.Distance(_player.position, transform.position) <= range || _isShooting)
+        if (Vector3.Distance(_playerLocation.position, transform.position) <= range || _isShooting)
         {
             FindPath();
         }
 
-        if (Vector3.Distance(_player.position, transform.position) <= _shootRange && canShoot)
+        if (Vector3.Distance(_playerLocation.position, transform.position) <= _shootRange && canShoot)
         {
             _isShooting = true;
             StartCoroutine(Shoot());
@@ -116,7 +116,7 @@ public class SpaceShipAI : MonoBehaviour
         yield return new WaitForSeconds(_timeBeforeNextShot);
         GameObject newBullet = Instantiate(_bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
 
-        newBullet.GetComponent<Rigidbody2D>().velocity = (_player.position - transform.position).normalized * _shootSpeed;
+        newBullet.GetComponent<Rigidbody2D>().velocity = (_playerModel.position - transform.position).normalized * _shootSpeed;
         canShoot = true;
     }
 
