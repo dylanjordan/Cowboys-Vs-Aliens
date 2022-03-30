@@ -10,14 +10,22 @@ public class Player : MonoBehaviour
     public int _maxHealth = 4;
     public int _currentHealth;
 
+    public HealthbarUI healthBar;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _currentHealth = _maxHealth;
+        healthBar.SetMaxHealth(_maxHealth);
     }
 
     // Update is called once per frame
     void Update()
+    {
+        Die();
+    }
+
+    private void Die()
     {
         if (_currentHealth <= 0)
         {
@@ -28,11 +36,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    //allow player to take damage
-
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
+        healthBar.SetHealth(_currentHealth);
     }
 
     //make player take damage
