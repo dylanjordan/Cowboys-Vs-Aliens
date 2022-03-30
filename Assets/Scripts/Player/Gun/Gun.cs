@@ -6,6 +6,7 @@ public class Gun : MonoBehaviour
 {
     //Gun and Player
     GameObject _playerPos;
+
     [SerializeField] GameObject _gunPos;
 
     //Gun rigidbody
