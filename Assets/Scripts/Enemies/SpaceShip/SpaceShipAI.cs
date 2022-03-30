@@ -5,6 +5,8 @@ using Pathfinding;
 
 public class SpaceShipAI : MonoBehaviour
 {
+    public Animator animator;
+
     public Transform _playerLocation, _playerModel,  _enemyGFX, shootPos;
 
     public GameObject _bulletPrefab;
@@ -18,6 +20,7 @@ public class SpaceShipAI : MonoBehaviour
 
     private bool _reachedEndOfPath = false;
     private bool _isShooting = false;
+    private bool _isInShootingRange = false;
     private bool canShoot = true;
 
     public float _enemySpeed = 200f;
@@ -36,7 +39,12 @@ public class SpaceShipAI : MonoBehaviour
     {
         InvokeRepeating("UpdatePath", 0f, _UpdatePathRate);
     }
-    
+
+    private void Update()
+    {
+        animator.SetBool("IsShooting", _isInShootingRange);
+    }
+
     private void UpdatePath()
     {
         if (_seeker.IsDone())
@@ -65,7 +73,12 @@ public class SpaceShipAI : MonoBehaviour
         if (Vector3.Distance(_playerLocation.position, transform.position) <= _shootRange && canShoot)
         {
             _isShooting = true;
+            _isInShootingRange = true;
             StartCoroutine(Shoot());
+        }
+        if (Vector3.Distance(_playerLocation.position, transform.position) >= _shootRange)
+        {
+            _isInShootingRange = false;
         }
         else
         {
