@@ -5,39 +5,27 @@ using UnityEngine;
 public class PlayerThrow : MonoBehaviour
 {
     PauseMenu pauseMenu;
-    //Gun Prefab
+
     [SerializeField] GameObject gunPrefab;
-
-    //Cursor
     [SerializeField] GameObject cursor;
-
-    //Player location and firing location
     [SerializeField] GameObject player;
     [SerializeField] GameObject playerArmEnd;
-
-    //Decorative handgun
     [SerializeField] GameObject fakeGun;
 
-    //Player's firing speed
     [SerializeField] float gunSpeed;
     
-    //Tracks if the player can fire
     public bool canThrow = true;
 
-    // Update is called once per frame
     void Update()
     {
         if (!PauseMenu.isPaused)
         {
-            //Arm Rotation
             Vector3 angle = cursor.transform.position - player.transform.position;
             float rotated = Mathf.Atan2(angle.y, angle.x) * Mathf.Rad2Deg;
             player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotated);
 
-            //Click to shoot
             if (Input.GetMouseButtonDown(0) && canThrow)
             {
-                //Get the direction and angle for the gun and Throw eeet
                 float distance = angle.magnitude;
                 Vector2 direction = angle / distance;
                 direction.Normalize();

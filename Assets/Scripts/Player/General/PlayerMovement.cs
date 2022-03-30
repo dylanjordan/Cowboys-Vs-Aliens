@@ -102,19 +102,6 @@ public class PlayerMovement : MonoBehaviour
         return shopInput;
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.collider.tag == "Ground")
-    //    {
-    //        for (int i = 0; i < collision.contacts.Length; i++)
-    //        {
-    //            if (collision.contacts[0].normal.y > 0.5)
-    //            {
-    //                isGrounded = true;
-    //            }
-    //        }
-    //    }
-    //}
     private bool isGrounded()
     {
         float extraHeightText = .1f;

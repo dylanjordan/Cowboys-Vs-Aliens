@@ -7,9 +7,6 @@ public class GameOver : MonoBehaviour
 {
     // mainly placeholder, just want to get the endgame scene in
     // will change to trigger by player death later
-
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -22,6 +19,5 @@ public class GameOver : MonoBehaviour
         {
             Time.timeScale = 1.0f;
         }
-
     }
 }
