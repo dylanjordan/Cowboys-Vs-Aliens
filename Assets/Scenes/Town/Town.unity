@@ -152,7 +152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 33b7bcf92ce35dd47b707733c6c29ea2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.222
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -391,6 +391,11 @@ Transform:
   m_Father: {fileID: 507751356}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &192319481 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2375254148155743169, guid: ef4582ea53b39bd4a980cb660b13b2db, type: 3}
+  m_PrefabInstance: {fileID: 749260820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &507751355
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed597378b04834b44826fe36086c569b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1772312976}
+  _player: {fileID: 0}
   shopToLoad: 3
   indicator: {fileID: 538111522}
 --- !u!1 &538111522
@@ -874,6 +879,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2375254148155743199, guid: ef4582ea53b39bd4a980cb660b13b2db, type: 3}
+      propertyPath: cursor
+      value: 
+      objectReference: {fileID: 976657005}
     - target: {fileID: 5209961946109554306, guid: ef4582ea53b39bd4a980cb660b13b2db, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7826,7 +7835,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766399473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.504005, y: -1.0799999, z: -7.263652}
+  m_LocalPosition: {x: -20.714008, y: -0.7899999, z: -7.263652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1229099331}
@@ -7851,8 +7860,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1772312981}
+  m_LookAt: {fileID: 192319481}
+  m_Follow: {fileID: 192319481}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 8.7
@@ -7885,53 +7894,6 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 740006339}
   m_ConfineScreenEdges: 1
   m_Damping: 0
---- !u!1 &1772312973 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5209961946109554328, guid: ef4582ea53b39bd4a980cb660b13b2db, type: 3}
-  m_PrefabInstance: {fileID: 749260820}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1772312974
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772312973}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.87, y: 3.3}
-    newSize: {x: 0.87, y: 3.3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.87, y: 3.3}
-  m_EdgeRadius: 0
---- !u!114 &1772312976 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5209961946109554308, guid: ef4582ea53b39bd4a980cb660b13b2db, type: 3}
-  m_PrefabInstance: {fileID: 749260820}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772312973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cdc3096d0d262646b4bb3a7fcc7f536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1772312981 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5209961946109554306, guid: ef4582ea53b39bd4a980cb660b13b2db, type: 3}
-  m_PrefabInstance: {fileID: 749260820}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2040810784
 GameObject:
   m_ObjectHideFlags: 0
@@ -8054,12 +8016,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140765991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.596607, y: 3.486436, z: -10}
+  m_LocalPosition: {x: -44.22133, y: 3.4930716, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 542006622}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2140765996
 MonoBehaviour:
