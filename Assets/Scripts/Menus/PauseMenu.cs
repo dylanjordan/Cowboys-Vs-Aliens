@@ -11,7 +11,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject controlsMenu;
 
     public static bool isPaused = false;
-    public static bool isOption = false;
 
     // Update is called once per frame
     void Update()
@@ -27,6 +26,17 @@ public class PauseMenu : MonoBehaviour
             {
                 // press escape not paused -> pause game
                 PauseGame();
+            }
+        }
+        if (settingsMenu.activeInHierarchy || controlsMenu.activeInHierarchy || optionMenu.activeInHierarchy)
+        {
+            isPaused = true;
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                settingsMenu.SetActive(false);
+                controlsMenu.SetActive(false);
+                optionMenu.SetActive(false);
+                pauseMenu.SetActive(true);
             }
         }
     }
