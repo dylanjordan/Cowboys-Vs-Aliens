@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
     {
         // save data
         SaveSystem.SavePlayer(this);
+        Debug.Log("Saving Game...");
     }
 
     public void LoadPlayer()
