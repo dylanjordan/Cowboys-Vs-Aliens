@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
     }
 
     // load game button, for now loads player into the town
-    public void LoadGame()
+    public void LoadTown()
     {
         // can change update this later
         SceneManager.LoadScene("Town");
