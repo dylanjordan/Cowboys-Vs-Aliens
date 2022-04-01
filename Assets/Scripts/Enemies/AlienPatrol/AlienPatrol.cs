@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AlienPatrol : MonoBehaviour
 {
+    [Header("Stats Related")]
     [SerializeField] EnemyHealthBar _healthBarControl;
 
     [SerializeField] GameObject _healthBar;
@@ -20,6 +21,20 @@ public class AlienPatrol : MonoBehaviour
 
     public int _damageRecieved = 2;
 
+    [Header("For Patrolling")]
+    [SerializeField] float _circleRadius;
+
+    [SerializeField] Transform groundCheck;
+    [SerializeField] Transform wallCheck;
+
+    [SerializeField] LayerMask groundLayer;
+
+    private float _moveDir = 1;
+
+    private bool _facingRight = true;
+    private bool checkingGround;
+    private bool checkingWall;
+
     private void Awake()
     {
         _enemyRb = GetComponent<Rigidbody2D>();
@@ -32,20 +47,37 @@ public class AlienPatrol : MonoBehaviour
     private void Update()
     {
         UpdateEnemy();
-
-        if (IsFacingRight())
-        {
-            _enemyRb.velocity = new Vector2(_enemySpeed, 0f);
-        }
-        else
-        {
-            _enemyRb.velocity = new Vector2(-_enemySpeed, 0f);
-        }
     }
 
-    private bool IsFacingRight()
+    private void FixedUpdate()
     {
-        return transform.localScale.x > Mathf.Epsilon;
+        checkingGround = Physics2D.OverlapCircle(groundCheck.position, _circleRadius, groundLayer);
+        checkingWall = Physics2D.OverlapCircle(wallCheck.position, _circleRadius, groundLayer);
+
+        Patrolling();
+    }
+
+    void Patrolling()
+    {
+        if (!checkingGround || checkingWall)
+        {
+            if (_facingRight)
+            {
+                Flip();
+            }
+            else if (!_facingRight)
+            {
+                Flip();
+            }
+        }
+        _enemyRb.velocity = new Vector2(_enemySpeed * _moveDir, _enemyRb.velocity.y);
+    }
+
+    void Flip()
+    {
+        _moveDir *= -1;
+        _facingRight = !_facingRight;
+        transform.Rotate(0, 180, 0);
     }
     public void TakeDamage()
     {
@@ -77,12 +109,13 @@ public class AlienPatrol : MonoBehaviour
         }
         return false;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        transform.localScale = new Vector2(-(Mathf.Sign(_enemyRb.velocity.x)), transform.localScale.y);
-    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.collider.tag == "Player")
+        {
+            Flip();
+        }
         if (collision.collider.tag == "Gun")
         {
             Instantiate(_hitParticles, transform.position, Quaternion.identity);
@@ -90,5 +123,12 @@ public class AlienPatrol : MonoBehaviour
             TakeDamage();
             _healthBarControl.SetHealth(_enemyHealth, _enemyMaxHealth);
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(groundCheck.position, _circleRadius);
+        Gizmos.DrawWireSphere(wallCheck.position, _circleRadius);
     }
 }
