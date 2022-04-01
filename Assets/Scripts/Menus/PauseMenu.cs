@@ -29,7 +29,19 @@ public class PauseMenu : MonoBehaviour
                 PauseGame();
             }
         }
+        if (settingsMenu.activeInHierarchy || controlsMenu.activeInHierarchy || optionMenu.activeInHierarchy)
+        {
+            isPaused = true;
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                settingsMenu.SetActive(false);
+                controlsMenu.SetActive(false);
+                optionMenu.SetActive(false);
+                pauseMenu.SetActive(true);
+            }
+        }
     }
+
 
     public void PauseGame()
     {
