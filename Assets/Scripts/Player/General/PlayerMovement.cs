@@ -18,9 +18,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
 
     private BoxCollider2D _coll;
+
     //Some bools for movement
     private bool jumpInput;
     private bool isWalking;
+    private bool CanMove = true;
 
     //Can enter a shop
     private bool canEnterShop = false;
@@ -41,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(CanMove)
+        { 
         Walk();
 
         if (Input.GetKeyDown(KeyCode.W) && !canEnterShop)
@@ -56,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             jumpInput = false;
             shopInput = false;
         }
-
+        }
         Debug.Log(isGrounded());
     }
 
@@ -106,6 +110,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float extraHeightText = .1f;
         return Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, extraHeightText, jumpableGround);
+    }
+
+    public void SetCanMove(bool move)
+    {
+        CanMove = move;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

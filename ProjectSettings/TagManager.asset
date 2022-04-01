@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Cursor
   - Wall
+  - Shop
   layers:
   - Default
   - TransparentFX
