@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
 {
     //create player health
 
-    public int _maxHealth = 4;
-    public int _currentHealth;
+    public float _maxHealth = 4.0f;
+    public float _currentHealth;
 
     public HealthbarUI healthBar;
 
@@ -36,10 +36,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         _currentHealth -= damage;
         healthBar.SetHealth(_currentHealth);
+        Debug.Log("Player's current health is " + _currentHealth);
     }
 
     //make player take damage

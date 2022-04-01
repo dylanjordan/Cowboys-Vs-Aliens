@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public float _destroyTime;
+    public float _bulletDamage = 1.5f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
-    }
-    IEnumerator CountTimer()
-    {
-        yield return new WaitForSeconds(_destroyTime);
 
-        Destroy(gameObject);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Player player = collision.gameObject.GetComponent<Player>();
+            player.TakeDamage(_bulletDamage);
+        }
     }
 }

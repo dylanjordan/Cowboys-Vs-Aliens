@@ -112,10 +112,13 @@ public class AlienPatrol : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            Player player = collision.gameObject.GetComponent<Player>();
             Flip();
+            player.TakeDamage(_contactDamage);
         }
+
         if (collision.collider.tag == "Gun")
         {
             Instantiate(_hitParticles, transform.position, Quaternion.identity);

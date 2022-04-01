@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
             shopInput = false;
         }
         }
-        Debug.Log(isGrounded());
+       
     }
 
     void FixedUpdate()

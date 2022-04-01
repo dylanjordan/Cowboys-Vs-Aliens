@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class JumpEnemy : MonoBehaviour
 {
+    public Animator animator;
+
     [Header("Health Related")]
     [SerializeField] EnemyHealthBar _healthBarControl;
     [SerializeField] GameObject _healthBar;
@@ -30,7 +32,7 @@ public class JumpEnemy : MonoBehaviour
     private bool _facingRight = true;
     private bool checkingGround;
     private bool checkingWall;
-
+    private bool _isJumping = false;
     [Header("For Jump Attack")]
     [SerializeField] float _jumpheight;
     [SerializeField] Transform _player;
@@ -61,6 +63,8 @@ public class JumpEnemy : MonoBehaviour
     private void Update()
     {
         UpdateJumper();
+
+        animator.SetBool("IsJumping", _isJumping);
     }
     private void FixedUpdate()
     {
@@ -80,6 +84,15 @@ public class JumpEnemy : MonoBehaviour
         if (_canSeePlayer)
         {
             FlipTowardsPlayer();
+        }
+
+        if (!_isGrounded)
+        {
+            _isJumping = true;
+        }
+        else
+        {
+            _isJumping = false;
         }
     }
 
@@ -184,9 +197,11 @@ public class JumpEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            Player player = collision.gameObject.GetComponent<Player>();
             Flip();
+            player.TakeDamage(_contactDamage);
         }
 
         if (collision.collider.tag == "Gun")

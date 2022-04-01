@@ -27,6 +27,7 @@ public class SpaceShipAI : MonoBehaviour
     public float _nextWaypointDistance = 2f;
     public float _shootRange, _shootSpeed;
     public float _timeBeforeNextShot = 1.0f;
+    public float _contactDamage = 1.0f;
 
     [SerializeField] public float _UpdatePathRate = .5f;
     [SerializeField] public float _distanceVal = 5.0f;
@@ -131,6 +132,15 @@ public class SpaceShipAI : MonoBehaviour
 
         newBullet.GetComponent<Rigidbody2D>().velocity = (_playerModel.position - transform.position).normalized * _shootSpeed;
         canShoot = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Player player = collision.gameObject.GetComponent<Player>();
+            player.TakeDamage(_contactDamage);
+        }
     }
 
     private void OnDrawGizmosSelected()
