@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
     PauseMenu pauseMenu;
     //Properties of the player
     Transform trans;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     //Some bools for movement
     private bool jumpInput;
     private bool isWalking;
+    private bool isJumping;
     private bool CanMove = true;
 
     //Can enter a shop
@@ -43,25 +45,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CanMove)
-        { 
-        Walk();
+        if (CanMove)
+        {
+            Walk();
 
-        if (Input.GetKeyDown(KeyCode.W) && !canEnterShop)
-        {
-            jumpInput = true;
+            if (Input.GetKeyDown(KeyCode.W) && !canEnterShop)
+            {
+                jumpInput = true;
+            }
+            if (Input.GetKeyDown(KeyCode.E) && canEnterShop)
+            {
+                shopInput = true;
+            }
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                jumpInput = false;
+                shopInput = false;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.W) && canEnterShop)
-        {
-            shopInput = true;
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            jumpInput = false;
-            shopInput = false;
-        }
-        }
-       
+
+        animator.SetBool("IsWalking", isWalking);
+        animator.SetBool("IsJumping", jumpInput);
+
     }
 
     void FixedUpdate()
@@ -89,11 +94,16 @@ public class PlayerMovement : MonoBehaviour
             playerArm.transform.localScale = new Vector3(1, 1, 1);
             isWalking = true;
         }
+        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        {
+            isWalking = false;
+        }
     }
 
     void Jump()
     {
         body.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        jumpInput = true;
     }
 
     public float GetSpeed()
