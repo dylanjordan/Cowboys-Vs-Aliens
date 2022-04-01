@@ -13,6 +13,11 @@ public class MainMenu : MonoBehaviour
         newGame = true;
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
     // function to close the game
     public void QuitGame()
     {
