@@ -473,12 +473,13 @@ MonoBehaviour:
   _playerModel: {fileID: 0}
   _enemyGFX: {fileID: 0}
   shootPos: {fileID: 1496227469128517195}
-  _bulletPrefab: {fileID: 7258093431055803157, guid: d4f507569ac6b1745b9635099f240946, type: 3}
+  _bulletPrefab: {fileID: 5745524326499279562, guid: d4f507569ac6b1745b9635099f240946, type: 3}
   _enemySpeed: 400
   _nextWaypointDistance: 2
   _shootRange: 5
   _shootSpeed: 15
   _timeBeforeNextShot: 0.95
+  _contactDamage: 1
   _UpdatePathRate: 0.5
   _distanceVal: 5
 --- !u!114 &6977617453669792052

@@ -116,11 +116,11 @@ public class SpaceShipAI : MonoBehaviour
         }
         if (_rb.velocity.x >= 0.01f && force.x > 0f)
         {
-            _enemyGFX.localScale = new Vector3(-0.3f, 0.3f, 1f);
+            _enemyGFX.localScale = new Vector3(-0.15f, 0.15f, 1f);
         }
         else if (_rb.velocity.x <= -0.0f && force.x < 0f)
         {
-            _enemyGFX.localScale = new Vector3(0.3f, 0.3f, 1f);
+            _enemyGFX.localScale = new Vector3(0.15f, 0.15f, 1f);
         }
     }
 
