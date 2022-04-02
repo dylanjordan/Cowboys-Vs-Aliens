@@ -4607,6 +4607,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1234364795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7759544489514463058, guid: ef4582ea53b39bd4a980cb660b13b2db, type: 3}
+  m_PrefabInstance: {fileID: 749260820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1270878662
 GameObject:
   m_ObjectHideFlags: 0
@@ -12188,7 +12193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766399473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.714008, y: -0.7899999, z: -7.263652}
+  m_LocalPosition: {x: -21.564007, y: -1.6599998, z: -7.263652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1229099331}
@@ -12214,7 +12219,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1234364795}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 8.7
