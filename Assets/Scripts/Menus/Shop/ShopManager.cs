@@ -30,9 +30,9 @@ public class ShopManager : MonoBehaviour
         shopItems[1, 3] = 3;
 
         //Price(s)
-        shopItems[2, 1] = 7;
-        shopItems[2, 2] = 7;
-        shopItems[2, 3] = 7;
+        shopItems[2, 1] = 50;
+        shopItems[2, 2] = 50;
+        shopItems[2, 3] = 5;
 
     }
 
