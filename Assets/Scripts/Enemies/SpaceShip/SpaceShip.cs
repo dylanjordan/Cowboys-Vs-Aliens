@@ -2,6 +2,8 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SpaceShip : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class SpaceShip : MonoBehaviour
     public float _contactDamage = 0.5f;
 
     public int _damageRecieved = 2;
+
+    public GameObject popUpMessage; // temporary
 
     public void Awake()
     {
@@ -53,6 +57,7 @@ public class SpaceShip : MonoBehaviour
         if (CheckIfDead())
         {
             Destroy(gameObject);
+            popUpMessage.SetActive(true);
         }
     }
 

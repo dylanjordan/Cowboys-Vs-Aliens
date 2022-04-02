@@ -8,15 +8,21 @@ using UnityEngine.SceneManagement;
 public class ShopManager : MonoBehaviour
 {
     public int[,] shopItems = new int[4, 4];
-    public float coins; // change to ingame currency later
+    private int coins;
 
     public Text coinsText;
     public GameObject NotEnoughMenu;
+    public GameObject CoinsCounter;
+
+    public bool bought = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        coinsText.text = "Coins:" + coins.ToString();
+        PlayerData data = SaveSystem.LoadPlayer();
+        CoinCounter.coinAmount = data.coins;
+        coins = CoinCounter.coinAmount;
+        coinsText.text = coins.ToString();
 
         //IDS
         shopItems[1, 1] = 1;
@@ -24,9 +30,9 @@ public class ShopManager : MonoBehaviour
         shopItems[1, 3] = 3;
 
         //Price(s)
-        shopItems[2, 1] = 5;
-        shopItems[2, 2] = 20;
-        shopItems[2, 3] = 9;
+        shopItems[2, 1] = 7;
+        shopItems[2, 2] = 7;
+        shopItems[2, 3] = 7;
 
     }
 
@@ -35,13 +41,14 @@ public class ShopManager : MonoBehaviour
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
 
         // get the price of the item selected
-        if (coins >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        if (CoinCounter.coinAmount >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
             // remove amount of coins item costs
-            coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
+            CoinCounter.coinAmount -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
             // update coins text
-            coinsText.text = "Coins:" + coins.ToString();
+            coinsText.text = CoinCounter.coinAmount.ToString();
         }
+        bought = true;
     }
 
     public void NotEnoughCoins()
@@ -52,21 +59,34 @@ public class ShopManager : MonoBehaviour
     IEnumerator NotEnoughMenuActive()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        if (coins < shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        if (CoinCounter.coinAmount < shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
             Debug.Log("You do not have enough coins to buy this!");
             NotEnoughMenu.SetActive(true);
         }
+        else if (CoinCounter.coinAmount >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        {
+            NotEnoughMenu.SetActive(false);
+        }
         yield return new WaitForSeconds(1.0f);
         NotEnoughMenu.SetActive(false);
     }
-
-    public void BackToTown()
+    public void WinGame()
     {
-        SceneManager.LoadScene("Town");
-        Debug.Log("Going back to Town");
+        SceneManager.LoadScene("WinGame");
     }
 
+    IEnumerator GoToWinGame()
+    {
+        Buy();
+        yield return new WaitForSeconds(0.01f);
+        WinGame();
+    }
+
+    public void BuyVictory()
+    {
+        StartCoroutine(GoToWinGame());
+    }
 }
 
 

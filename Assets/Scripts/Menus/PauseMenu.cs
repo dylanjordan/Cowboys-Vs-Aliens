@@ -34,6 +34,7 @@ public class PauseMenu : MonoBehaviour
             isPaused = true;
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                Time.timeScale = 0.0f;
                 settingsMenu.SetActive(false);
                 controlsMenu.SetActive(false);
                 optionMenu.SetActive(false);

@@ -12,7 +12,7 @@ public class PlayerThrow : MonoBehaviour
     [SerializeField] GameObject playerArmEnd;
     [SerializeField] GameObject fakeGun;
 
-    [SerializeField] float gunSpeed;
+    public float gunSpeed;
     
     public bool canThrow = true;
 

@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject playerArm;
 
     //Movement speed and jump force
-    [SerializeField] float speed;
+    public float speed;
     [SerializeField] float jumpForce;
     [SerializeField] private LayerMask jumpableGround;
 
