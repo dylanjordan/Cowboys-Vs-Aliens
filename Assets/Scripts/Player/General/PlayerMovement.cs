@@ -6,21 +6,24 @@ public class PlayerMovement : MonoBehaviour
 {
     public Animator animator;
     PauseMenu pauseMenu;
+
     //Properties of the player
     Transform trans;
-    public Rigidbody2D body;
+    Rigidbody2D body;
 
     //Getting the arm for a visual fix
     public GameObject playerArm;
 
     //Movement speed and jump force
-    public float speed;
+    [SerializeField] float speed;
     [SerializeField] float jumpForce;
+    [SerializeField] float maxSpeed;
     [SerializeField] private LayerMask jumpableGround;
 
     private BoxCollider2D _coll;
 
     //Some bools for movement
+    float runInput;
     private bool jumpInput;
     private bool isWalking;
     private bool isJumping;
@@ -45,32 +48,50 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        runInput = Input.GetAxis("Horizontal");
+
         if (CanMove)
         {
-            Walk();
-
-            if (Input.GetKeyDown(KeyCode.W) && !canEnterShop)
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 jumpInput = true;
             }
+
             if (Input.GetKeyDown(KeyCode.E) && canEnterShop)
             {
                 shopInput = true;
             }
+
             if (Input.GetKeyUp(KeyCode.W))
             {
                 jumpInput = false;
                 shopInput = false;
             }
+
+            if (runInput == 0 && body.velocity.y == 0)
+            {
+                body.drag = 3;
+            }
+            else
+            {
+                body.drag = 1;
+            }
         }
+
+        Debug.Log(runInput);
 
         animator.SetBool("IsWalking", isWalking);
         animator.SetBool("IsJumping", jumpInput);
-
     }
 
     void FixedUpdate()
     {
+        if (runInput != 0)
+        {
+            Walk();
+        }
+
         if (jumpInput && isGrounded())
         {
             Jump();
@@ -79,18 +100,24 @@ public class PlayerMovement : MonoBehaviour
 
     void Walk()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Mathf.Abs(body.velocity.x) >= maxSpeed)
         {
-            trans.position += transform.right * Time.deltaTime * speed;
-            trans.rotation = Quaternion.Euler(0, 180, 0);
+            return;
+        }
+
+        if (runInput > 0)
+        {
+            body.AddForce(Vector2.right * speed, ForceMode2D.Force);
+            trans.rotation = Quaternion.Euler(0, 0, 0);
             //Rotates the arm to match the player
             playerArm.transform.localScale = new Vector3(1, -1, 1);
             isWalking = true;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (runInput < 0)
         {
-            trans.position += transform.right * Time.deltaTime * speed;
-            trans.rotation = Quaternion.Euler(0, 0, 0);
+            body.AddForce(Vector2.left * speed, ForceMode2D.Force);
+            trans.rotation = Quaternion.Euler(0, 180, 0);
+            //Rotates the arm to match the player
             playerArm.transform.localScale = new Vector3(1, 1, 1);
             isWalking = true;
         }

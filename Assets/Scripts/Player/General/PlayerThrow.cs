@@ -7,14 +7,20 @@ public class PlayerThrow : MonoBehaviour
     PauseMenu pauseMenu;
 
     [SerializeField] GameObject gunPrefab;
-    [SerializeField] GameObject cursor;
     [SerializeField] GameObject player;
     [SerializeField] GameObject playerArmEnd;
     [SerializeField] GameObject fakeGun;
 
+    GameObject cursor;
+
     public float gunSpeed;
     
     public bool canThrow = true;
+
+     void Start()
+    {
+        cursor = GameObject.Find("Cursor");
+    }
 
     void Update()
     {
