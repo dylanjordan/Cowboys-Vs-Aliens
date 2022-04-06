@@ -1882,6 +1882,10 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 3549337190964083182, guid: 1186ec72901f6b04783f71fc1b79b781, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: b61015029ee16cb48a944e350ca80d32, type: 2}
     - target: {fileID: 3549337190964083190, guid: 1186ec72901f6b04783f71fc1b79b781, type: 3}
       propertyPath: m_RootOrder
       value: 2
