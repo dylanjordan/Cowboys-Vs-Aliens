@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (CanMove)
         {
+
             if (Input.GetKeyDown(KeyCode.W))
             {
                 jumpInput = true;
@@ -71,11 +72,12 @@ public class PlayerMovement : MonoBehaviour
 
             if (runInput == 0 && body.velocity.y == 0)
             {
-                body.drag = 3;
+                isWalking = false;
+                body.drag = 10;
             }
             else
             {
-                body.drag = 1;
+                body.drag = 2;
             }
         }
 
@@ -87,9 +89,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (runInput != 0)
+        if (CanMove)
         {
-            Walk();
+            if (runInput != 0)
+            {
+                Walk();
+            }
         }
 
         if (jumpInput && isGrounded())
@@ -110,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             body.AddForce(Vector2.right * speed, ForceMode2D.Force);
             trans.rotation = Quaternion.Euler(0, 0, 0);
             //Rotates the arm to match the player
-            playerArm.transform.localScale = new Vector3(1, -1, 1);
+            playerArm.transform.localScale = new Vector3(1, 1, 1);
             isWalking = true;
         }
         if (runInput < 0)
@@ -118,10 +123,10 @@ public class PlayerMovement : MonoBehaviour
             body.AddForce(Vector2.left * speed, ForceMode2D.Force);
             trans.rotation = Quaternion.Euler(0, 180, 0);
             //Rotates the arm to match the player
-            playerArm.transform.localScale = new Vector3(1, 1, 1);
+            playerArm.transform.localScale = new Vector3(1, -1, 1);
             isWalking = true;
         }
-        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        if (runInput == 0)
         {
             isWalking = false;
         }
