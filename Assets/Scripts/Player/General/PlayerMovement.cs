@@ -79,12 +79,26 @@ public class PlayerMovement : MonoBehaviour
             {
                 body.drag = 2;
             }
+
+            if (runInput != 0 && body.velocity.y == 0)
+            {
+                isWalking = true;
+            }
+        }
+
+        if (!isGrounded())
+        {
+            isJumping = true;
+        }
+        else
+        {
+            isJumping = false;
         }
 
         Debug.Log(runInput);
 
         animator.SetBool("IsWalking", isWalking);
-        animator.SetBool("IsJumping", jumpInput);
+        animator.SetBool("IsJumping", isJumping);
     }
 
     void FixedUpdate()
@@ -116,7 +130,6 @@ public class PlayerMovement : MonoBehaviour
             trans.rotation = Quaternion.Euler(0, 0, 0);
             //Rotates the arm to match the player
             playerArm.transform.localScale = new Vector3(1, 1, 1);
-            isWalking = true;
         }
         if (runInput < 0)
         {
@@ -124,7 +137,6 @@ public class PlayerMovement : MonoBehaviour
             trans.rotation = Quaternion.Euler(0, 180, 0);
             //Rotates the arm to match the player
             playerArm.transform.localScale = new Vector3(1, -1, 1);
-            isWalking = true;
         }
         if (runInput == 0)
         {

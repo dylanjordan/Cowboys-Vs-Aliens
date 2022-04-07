@@ -320,8 +320,8 @@ MonoBehaviour:
   _hitParticles: {fileID: 8591682493932031579, guid: 9177601b0bcd3fe4b809cbc4787fa0a3, type: 3}
   _enemyRb: {fileID: 4444760294113838405}
   _enemyBoxCollider: {fileID: 4444760294113838402}
-  _enemyHealth: 10
-  _enemyMaxHealth: 10
+  _enemyHealth: 6
+  _enemyMaxHealth: 6
   _enemySpeed: 1.5
   _contactDamage: 0.5
   _damageRecieved: 2

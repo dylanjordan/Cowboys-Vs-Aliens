@@ -76,4 +76,17 @@ public class Gun : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            if (recalling)
+            {
+                Debug.Log("I've returned!");
+                recalling = false;
+                Destroy(gameObject);
+            }
+        }
+    }
 }
