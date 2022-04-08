@@ -126,6 +126,12 @@ public class AlienPatrol : MonoBehaviour
             TakeDamage();
             _healthBarControl.SetHealth(_enemyHealth, _enemyMaxHealth);
         }
+
+        if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.collider.tag != "Gun")
+        {
+            Flip();
+        }
+
     }
 
     private void OnDrawGizmosSelected()

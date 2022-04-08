@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            TakeDamage(2);
+            TakeDamage(1);
         }
     }
 

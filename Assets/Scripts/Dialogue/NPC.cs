@@ -40,6 +40,20 @@ public class NPC : MonoBehaviour
         {
             indicator.SetActive(true);
         }
+
+        if (collision.CompareTag("Player"))
+        {
+            if (talk)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                talk = false;
+            }
+            if (next)
+            {
+                FindObjectOfType<DialogueManager>().DisplayNextSentence();
+                next = false;
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

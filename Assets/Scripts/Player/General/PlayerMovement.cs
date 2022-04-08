@@ -95,6 +95,11 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
 
+        if(trans.position.y <= -12)
+        {
+            FindObjectOfType<Player>()._currentHealth = 0;
+        }
+
         Debug.Log(runInput);
 
         animator.SetBool("IsWalking", isWalking);
