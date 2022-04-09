@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class ShopManager : MonoBehaviour
 {
+    Player player;
+
     public int[,] shopItems = new int[4, 4];
     private int coins;
 
@@ -15,6 +17,8 @@ public class ShopManager : MonoBehaviour
     public GameObject CoinsCounter;
 
     public bool bought = false;
+
+    int healthIncrease = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -86,6 +90,11 @@ public class ShopManager : MonoBehaviour
     public void BuyVictory()
     {
         StartCoroutine(GoToWinGame());
+    }
+
+    public void BuyHealth()
+    {
+        player._maxHealth += healthIncrease;
     }
 }
 
