@@ -14,7 +14,16 @@ public class ShopManager : MonoBehaviour
     public GameObject NotEnoughMenu;
     public GameObject CoinsCounter;
 
-    int healthIncrease = 2;
+    bool bought = false;
+
+    int playerMaxHealth;
+    int healthIncrease = 500;
+
+    int playerDamage;
+    int damageIncrease = 1000;
+
+    int playerSpeed;
+    int speedIncrease = 2000;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +45,13 @@ public class ShopManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        playerMaxHealth = PlayerPrefs.GetInt("_maxHealth");
+        playerDamage = PlayerPrefs.GetInt("_bulletDamage");
+        playerSpeed = PlayerPrefs.GetInt("maxSpeed");
+    }
+
     public void Buy()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
@@ -47,12 +63,14 @@ public class ShopManager : MonoBehaviour
             CoinCounter.coinAmount -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
             // update coins text
             coinsText.text = CoinCounter.coinAmount.ToString();
+
+            bought = true;
         }
-        if (CoinCounter.coinAmount < shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        if (CoinCounter.coinAmount < shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID] && bought)
         {
             StartCoroutine(NotEnoughMenuActive());
         }
-        else if (CoinCounter.coinAmount >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        else
         {
             NotEnoughMenu.SetActive(false);
         }
@@ -69,20 +87,41 @@ public class ShopManager : MonoBehaviour
         yield return new WaitForSeconds(0.9f);
         NotEnoughMenu.SetActive(false);
     }
+    
 
     public void BuyHealth()
     {
+        GainHealth();
         Debug.Log("Maximum Health increased by 'x'!");
     }
 
     public void BuySpeed()
     {
-        Debug.Log("Movement Speed Increased by 'x' %!"); // idk wat number so ya
+        GainSpeed();
+        Debug.Log("Movement Speed Increased by 'x' %!");
     }
 
     public void BuyDamage()
     {
+        GainDamage();
         Debug.Log("Attack Damage increased by 'x' %!");
+    }
+
+    void GainHealth()
+    {
+        playerMaxHealth += healthIncrease;
+        PlayerPrefs.SetInt("_maxHealth", playerMaxHealth);
+    }
+
+    void GainDamage()
+    {
+        playerDamage += damageIncrease;
+        PlayerPrefs.SetInt("_bulletDamage", playerDamage);
+    }
+    void GainSpeed()
+    {
+        playerSpeed += speedIncrease;
+        PlayerPrefs.SetInt("maxSpeed", playerSpeed);
     }
 }
 
