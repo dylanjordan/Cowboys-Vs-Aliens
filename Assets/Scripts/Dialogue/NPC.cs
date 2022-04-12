@@ -40,20 +40,6 @@ public class NPC : MonoBehaviour
         {
             indicator.SetActive(true);
         }
-
-        if (collision.CompareTag("Player"))
-        {
-            if (talk)
-            {
-                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-                talk = false;
-            }
-            if (next)
-            {
-                FindObjectOfType<DialogueManager>().DisplayNextSentence();
-                next = false;
-            }
-        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -62,6 +48,7 @@ public class NPC : MonoBehaviour
         {
             if (talk)
             {
+                audioTest.Pause();
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 talk = false;
             }
@@ -75,8 +62,12 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        indicator.SetActive(false);
-        talk = false;
-        next = false;
+        if (collision.CompareTag("Player"))
+        {
+            indicator.SetActive(false);
+            talk = false;
+            next = false;
+            audioTest.UnPause();
+        }
     }
 }

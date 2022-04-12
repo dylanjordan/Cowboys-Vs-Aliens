@@ -40,7 +40,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
-        FindObjectOfType<NPC>().audioTest.Pause();
         PlaySound(openAudio);
     }
 
@@ -48,10 +47,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
+            PlaySound(closeAudio);
             EndDialogue();
             return;
         }
         string sentence = sentences.Dequeue();
+        PlaySound(openAudio);
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
@@ -70,8 +71,6 @@ public class DialogueManager : MonoBehaviour
     {
         FindObjectOfType<PlayerMovement>().SetCanMove(true);
         animator.SetBool("IsOpen", false);
-        PlaySound(closeAudio);
-        FindObjectOfType<NPC>().audioTest.Play();
     }
 
     public void PlaySound(AudioClip noise)

@@ -100,8 +100,6 @@ public class PlayerMovement : MonoBehaviour
             FindObjectOfType<Player>()._currentHealth = 0;
         }
 
-        Debug.Log(runInput);
-
         animator.SetBool("IsWalking", isWalking);
         animator.SetBool("IsJumping", isJumping);
     }
