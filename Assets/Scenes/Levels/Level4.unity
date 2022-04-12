@@ -133,9 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3335430}
   - component: {fileID: 3335431}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (35)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.31221, y: -1.0960248}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -178,7 +178,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0049286, y: 1.6310811}
   m_EdgeRadius: 0
 --- !u!1 &3775615
 GameObject:
@@ -538,9 +538,9 @@ GameObject:
   m_Component:
   - component: {fileID: 62149931}
   - component: {fileID: 62149932}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (26)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -572,7 +572,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 4.2543373, y: -2.1085994}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -583,7 +583,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 3.0586166, y: 6.62089}
   m_EdgeRadius: 0
 --- !u!1 &62910553
 GameObject:
@@ -1009,9 +1009,9 @@ GameObject:
   m_Component:
   - component: {fileID: 106806076}
   - component: {fileID: 106806077}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (19)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1043,7 +1043,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.383688, y: -2.409217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1054,7 +1054,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.050663, y: 5.552473}
   m_EdgeRadius: 0
 --- !u!1 &148837629
 GameObject:
@@ -1123,9 +1123,9 @@ GameObject:
   m_Component:
   - component: {fileID: 153446358}
   - component: {fileID: 153446359}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (42)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1157,7 +1157,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 1.7599182, y: -0.72564983}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1168,7 +1168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.005371, y: 0.55838776}
   m_EdgeRadius: 0
 --- !u!1 &157956354
 GameObject:
@@ -1273,9 +1273,9 @@ GameObject:
   m_Component:
   - component: {fileID: 183248806}
   - component: {fileID: 183248807}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (47)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1307,7 +1307,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 15.433556, y: -0.8142842}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1318,7 +1318,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 37.058792, y: 2.0159144}
   m_EdgeRadius: 0
 --- !u!1 &187221455
 GameObject:
@@ -1330,9 +1330,9 @@ GameObject:
   m_Component:
   - component: {fileID: 187221456}
   - component: {fileID: 187221457}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (22)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1364,7 +1364,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.0749283, y: -0.8993349}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1375,7 +1375,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 7.0058746, y: 1.5507832}
   m_EdgeRadius: 0
 --- !u!1001 &205454034
 PrefabInstance:
@@ -1444,9 +1444,9 @@ GameObject:
   m_Component:
   - component: {fileID: 216716903}
   - component: {fileID: 216716904}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1703,9 +1703,9 @@ GameObject:
   m_Component:
   - component: {fileID: 255519236}
   - component: {fileID: 255519237}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (15)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1760,9 +1760,9 @@ GameObject:
   m_Component:
   - component: {fileID: 260757642}
   - component: {fileID: 260757643}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (44)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1794,7 +1794,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 4.097801, y: -1.8204305}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1805,7 +1805,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 1.9912262, y: 1.5613486}
   m_EdgeRadius: 0
 --- !u!1 &267935011
 GameObject:
@@ -1962,9 +1962,9 @@ GameObject:
   m_Component:
   - component: {fileID: 277359729}
   - component: {fileID: 277359730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (49)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1996,7 +1996,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.679924, y: -1.1501858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2007,7 +2007,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 3.0098724, y: 3.5034013}
   m_EdgeRadius: 0
 --- !u!1 &286834135
 GameObject:
@@ -2019,9 +2019,9 @@ GameObject:
   m_Component:
   - component: {fileID: 286834136}
   - component: {fileID: 286834137}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (41)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2053,7 +2053,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.3114777, y: -1.3122225}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2064,7 +2064,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 0.9807434, y: 0.62473965}
   m_EdgeRadius: 0
 --- !u!1 &294177474
 GameObject:
@@ -2215,9 +2215,9 @@ GameObject:
   m_Component:
   - component: {fileID: 336822736}
   - component: {fileID: 336822737}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2334,9 +2334,9 @@ GameObject:
   m_Component:
   - component: {fileID: 350916552}
   - component: {fileID: 350916553}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (32)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2368,7 +2368,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.1377792, y: -6.3313055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2379,7 +2379,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0220337, y: 8.565908}
   m_EdgeRadius: 0
 --- !u!1 &351208080
 GameObject:
@@ -2525,9 +2525,9 @@ GameObject:
   m_Component:
   - component: {fileID: 351729258}
   - component: {fileID: 351729259}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (50)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2559,7 +2559,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 0.9115753, y: -0.84754515}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2570,7 +2570,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 7.9858704, y: 1.5281763}
   m_EdgeRadius: 0
 --- !u!1 &358921610
 GameObject:
@@ -2639,9 +2639,9 @@ GameObject:
   m_Component:
   - component: {fileID: 384571194}
   - component: {fileID: 384571195}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (18)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3206,9 +3206,9 @@ GameObject:
   m_Component:
   - component: {fileID: 469736072}
   - component: {fileID: 469736073}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (16)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3320,9 +3320,9 @@ GameObject:
   m_Component:
   - component: {fileID: 482588443}
   - component: {fileID: 482588444}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (30)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3354,7 +3354,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.0286865, y: -6.3533974}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3365,7 +3365,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0606384, y: 8.578749}
   m_EdgeRadius: 0
 --- !u!1 &501602931
 GameObject:
@@ -3377,9 +3377,9 @@ GameObject:
   m_Component:
   - component: {fileID: 501602932}
   - component: {fileID: 501602933}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (45)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3411,7 +3411,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.9088745, y: -0.78605807}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3422,7 +3422,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 5.988037, y: 1.6386955}
   m_EdgeRadius: 0
 --- !u!1 &502533120
 GameObject:
@@ -3615,9 +3615,9 @@ GameObject:
   m_Component:
   - component: {fileID: 515499174}
   - component: {fileID: 515499175}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (46)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3649,7 +3649,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.6722794, y: -1.1097925}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3660,7 +3660,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 7.9731293, y: 1.5480466}
   m_EdgeRadius: 0
 --- !u!1 &518710638
 GameObject:
@@ -3806,9 +3806,9 @@ GameObject:
   m_Component:
   - component: {fileID: 526542309}
   - component: {fileID: 526542310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (53)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3840,7 +3840,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 5.4073105, y: -1.3384607}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3851,7 +3851,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 3.0200653, y: 1.5364537}
   m_EdgeRadius: 0
 --- !u!1 &531429014
 GameObject:
@@ -3943,9 +3943,9 @@ GameObject:
   m_Component:
   - component: {fileID: 543613214}
   - component: {fileID: 543613215}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4000,9 +4000,9 @@ GameObject:
   m_Component:
   - component: {fileID: 546837095}
   - component: {fileID: 546837096}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (58)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4034,7 +4034,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.620018, y: -0.95348704}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4045,7 +4045,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 5.0187836, y: 1.487437}
   m_EdgeRadius: 0
 --- !u!1 &553554777
 GameObject:
@@ -5369,8 +5369,8 @@ Tilemap:
   - first: {x: 192, y: -11, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7419,8 +7419,8 @@ Tilemap:
   - first: {x: 151, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18314,15 +18314,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f8b3c7f976ccbb3439b29e7f6d3cd369, type: 2}
   - m_RefCount: 45
     m_Data: {fileID: 11400000, guid: 2d84a15cd3f94ee47a320255c3eb7c40, type: 2}
-  - m_RefCount: 268
+  - m_RefCount: 267
     m_Data: {fileID: 11400000, guid: 271994d598b946a43aa2910a0c967fb9, type: 2}
-  - m_RefCount: 45
+  - m_RefCount: 46
     m_Data: {fileID: 11400000, guid: 4a6d7bc381306664b827fbb07e7641f9, type: 2}
   - m_RefCount: 61
     m_Data: {fileID: 11400000, guid: 02095fe3a27beeb488103f148a44da25, type: 2}
-  - m_RefCount: 45
+  - m_RefCount: 46
     m_Data: {fileID: 11400000, guid: 06b90431251d7cf4aa996c60b5ae3231, type: 2}
-  - m_RefCount: 268
+  - m_RefCount: 267
     m_Data: {fileID: 11400000, guid: db36a8a12e5b81c469cb97f4babb094d, type: 2}
   - m_RefCount: 367
     m_Data: {fileID: 11400000, guid: 92c0ef70ca78f424fbe59cdab557c5a8, type: 2}
@@ -18357,15 +18357,15 @@ Tilemap:
     m_Data: {fileID: -2122721605700892671, guid: 0ce0005428b877b4cadfbd131a15fe95, type: 3}
   - m_RefCount: 45
     m_Data: {fileID: 8883089360963205110, guid: 0ce0005428b877b4cadfbd131a15fe95, type: 3}
-  - m_RefCount: 268
+  - m_RefCount: 267
     m_Data: {fileID: 6715173420458149067, guid: 0ce0005428b877b4cadfbd131a15fe95, type: 3}
-  - m_RefCount: 45
+  - m_RefCount: 46
     m_Data: {fileID: -3408839220369167878, guid: 0ce0005428b877b4cadfbd131a15fe95, type: 3}
   - m_RefCount: 61
     m_Data: {fileID: -7745377142443862253, guid: 0ce0005428b877b4cadfbd131a15fe95, type: 3}
-  - m_RefCount: 45
+  - m_RefCount: 46
     m_Data: {fileID: 4579840143257958375, guid: 0ce0005428b877b4cadfbd131a15fe95, type: 3}
-  - m_RefCount: 268
+  - m_RefCount: 267
     m_Data: {fileID: -6169922375410858227, guid: 0ce0005428b877b4cadfbd131a15fe95, type: 3}
   - m_RefCount: 367
     m_Data: {fileID: 2803302668219023648, guid: 0ce0005428b877b4cadfbd131a15fe95, type: 3}
@@ -18933,9 +18933,9 @@ GameObject:
   m_Component:
   - component: {fileID: 716129152}
   - component: {fileID: 716129153}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (38)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18967,7 +18967,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.7476807, y: 0.23007727}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18978,7 +18978,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 8.002655, y: 1.6011972}
   m_EdgeRadius: 0
 --- !u!1 &727386440
 GameObject:
@@ -19104,9 +19104,9 @@ GameObject:
   m_Component:
   - component: {fileID: 757157624}
   - component: {fileID: 757157625}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (12)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19218,9 +19218,9 @@ GameObject:
   m_Component:
   - component: {fileID: 782593379}
   - component: {fileID: 782593380}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (13)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19275,9 +19275,9 @@ GameObject:
   m_Component:
   - component: {fileID: 795384426}
   - component: {fileID: 795384427}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (29)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19309,7 +19309,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.0286827, y: -5.342042}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19320,7 +19320,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.1439133, y: 8.602766}
   m_EdgeRadius: 0
 --- !u!1 &808553401
 GameObject:
@@ -19389,9 +19389,9 @@ GameObject:
   m_Component:
   - component: {fileID: 814209063}
   - component: {fileID: 814209064}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (56)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19423,7 +19423,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.2223663, y: -2.1499147}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19434,7 +19434,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 3.0056458, y: 4.639248}
   m_EdgeRadius: 0
 --- !u!1 &820661573
 GameObject:
@@ -19446,9 +19446,9 @@ GameObject:
   m_Component:
   - component: {fileID: 820661574}
   - component: {fileID: 820661575}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (36)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19480,7 +19480,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 1.6863747, y: -2.1103678}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19491,7 +19491,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 8.938133, y: 5.441642}
   m_EdgeRadius: 0
 --- !u!1 &821770549
 GameObject:
@@ -19503,9 +19503,9 @@ GameObject:
   m_Component:
   - component: {fileID: 821770550}
   - component: {fileID: 821770551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19560,9 +19560,9 @@ GameObject:
   m_Component:
   - component: {fileID: 839788641}
   - component: {fileID: 839788642}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (43)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19594,7 +19594,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.8506012, y: -0.739776}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19605,7 +19605,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.9659424, y: 1.4907176}
   m_EdgeRadius: 0
 --- !u!1 &864145179
 GameObject:
@@ -19819,9 +19819,9 @@ GameObject:
   m_Component:
   - component: {fileID: 908187104}
   - component: {fileID: 908187105}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (24)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19853,7 +19853,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.653267, y: -0.8047466}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19864,7 +19864,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 9.9989395, y: 1.5603323}
   m_EdgeRadius: 0
 --- !u!1 &927683404
 GameObject:
@@ -20055,9 +20055,9 @@ GameObject:
   m_Component:
   - component: {fileID: 952178812}
   - component: {fileID: 952178813}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (7)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21069,9 +21069,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1163676526}
   - component: {fileID: 1163676527}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (55)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21103,7 +21103,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.1842499, y: -3.777483}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -21114,7 +21114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 3.031067, y: 5.55694}
   m_EdgeRadius: 0
 --- !u!1 &1163869664
 GameObject:
@@ -21259,9 +21259,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1183771617}
   - component: {fileID: 1183771618}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (39)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21293,7 +21293,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.7526093, y: -0.9881463}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -21304,7 +21304,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 1.9827576, y: 1.5413561}
   m_EdgeRadius: 0
 --- !u!1 &1193319027
 GameObject:
@@ -21405,9 +21405,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1214781536}
   - component: {fileID: 1214781537}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21462,9 +21462,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1237328420}
   - component: {fileID: 1237328421}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21519,9 +21519,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1241729739}
   - component: {fileID: 1241729740}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (23)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21553,7 +21553,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.4778519, y: -1.2210994}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -21564,7 +21564,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 7.981186, y: 1.5179911}
   m_EdgeRadius: 0
 --- !u!1 &1265795362
 GameObject:
@@ -21576,9 +21576,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1265795363}
   - component: {fileID: 1265795364}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (61)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21610,7 +21610,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 1.6812286, y: -1.2864957}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -21621,7 +21621,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 16.94522, y: 1.5936766}
   m_EdgeRadius: 0
 --- !u!1 &1271996812
 GameObject:
@@ -21690,9 +21690,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1306054625}
   - component: {fileID: 1306054626}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (60)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21724,7 +21724,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 4.5562897, y: -0.9060931}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -21735,7 +21735,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0100708, y: 2.8121862}
   m_EdgeRadius: 0
 --- !u!1 &1310371106
 GameObject:
@@ -21747,9 +21747,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1310371107}
   - component: {fileID: 1310371108}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (28)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21781,7 +21781,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.20533, y: -0.886924}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -21792,7 +21792,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0137634, y: 1.627604}
   m_EdgeRadius: 0
 --- !u!1 &1321047166
 GameObject:
@@ -22301,9 +22301,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1379112812}
   - component: {fileID: 1379112813}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (27)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22335,7 +22335,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 5.7285347, y: -1.1541706}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -22346,7 +22346,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 16.926872, y: 3.620187}
   m_EdgeRadius: 0
 --- !u!1 &1418006514
 GameObject:
@@ -22358,9 +22358,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1418006515}
   - component: {fileID: 1418006516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22415,9 +22415,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1424307160}
   - component: {fileID: 1424307161}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (52)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22449,7 +22449,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 4.8362045, y: -1.4271569}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -22460,7 +22460,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.041275, y: 2.545329}
   m_EdgeRadius: 0
 --- !u!1 &1427699020
 GameObject:
@@ -22818,9 +22818,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1479092931}
   - component: {fileID: 1479092932}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (57)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22852,7 +22852,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.619751, y: -2.0355835}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -22863,7 +22863,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 8.950897, y: 3.4959335}
   m_EdgeRadius: 0
 --- !u!1 &1481660509
 GameObject:
@@ -23115,9 +23115,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1521463752}
   - component: {fileID: 1521463753}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (48)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23149,7 +23149,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.850586, y: -1.0058694}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -23160,7 +23160,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 8.962463, y: 1.5265541}
   m_EdgeRadius: 0
 --- !u!1 &1524933558
 GameObject:
@@ -24014,9 +24014,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1634622187}
   - component: {fileID: 1634622188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (11)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24128,9 +24128,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1640395010}
   - component: {fileID: 1640395011}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (33)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24162,7 +24162,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 1.569561, y: -5.378017}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -24173,7 +24173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0220413, y: 8.433806}
   m_EdgeRadius: 0
 --- !u!1 &1653439768
 GameObject:
@@ -24376,9 +24376,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1657642834}
   - component: {fileID: 1657642835}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (62)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24410,7 +24410,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.7173462, y: 0.32456636}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -24421,7 +24421,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.023407, y: 7.0589647}
   m_EdgeRadius: 0
 --- !u!1 &1669676821
 GameObject:
@@ -24624,9 +24624,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1699319047}
   - component: {fileID: 1699319048}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (14)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24795,9 +24795,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1739004839}
   - component: {fileID: 1739004840}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (59)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24829,7 +24829,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.6295013, y: -0.9511912}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -24840,7 +24840,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 10.990112, y: 1.5506344}
   m_EdgeRadius: 0
 --- !u!1 &1748769338
 GameObject:
@@ -24966,9 +24966,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1774332657}
   - component: {fileID: 1774332658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (37)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25000,7 +25000,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.9963531, y: -0.7043147}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -25011,7 +25011,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 11.074799, y: 3.586793}
   m_EdgeRadius: 0
 --- !u!1 &1803035434
 GameObject:
@@ -25023,9 +25023,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1803035435}
   - component: {fileID: 1803035436}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (25)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25057,7 +25057,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 6.168934, y: -2.672618}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -25068,7 +25068,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 19.004715, y: 5.558173}
   m_EdgeRadius: 0
 --- !u!1 &1813734495
 GameObject:
@@ -25548,9 +25548,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1842781924}
   - component: {fileID: 1842781925}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (31)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25582,7 +25582,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 3.026989, y: -6.3203154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -25593,7 +25593,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0411758, y: 8.454962}
   m_EdgeRadius: 0
 --- !u!1 &1852400852
 GameObject:
@@ -25605,9 +25605,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1852400853}
   - component: {fileID: 1852400854}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25719,9 +25719,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1870207591}
   - component: {fileID: 1870207592}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (17)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25776,9 +25776,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1891120679}
   - component: {fileID: 1891120680}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (34)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25810,7 +25810,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 4.2292786, y: -1.1350489}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -25821,7 +25821,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 1.9659119, y: 1.5530329}
   m_EdgeRadius: 0
 --- !u!1001 &1896779332
 PrefabInstance:
@@ -25947,9 +25947,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1928929226}
   - component: {fileID: 1928929227}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (51)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25981,7 +25981,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 5.1699066, y: -0.5077281}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -25992,7 +25992,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 8.99115, y: 2.0154562}
   m_EdgeRadius: 0
 --- !u!1 &1975544237
 GameObject:
@@ -26140,9 +26140,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1984446026}
   - component: {fileID: 1984446027}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (40)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26174,7 +26174,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.7742462, y: -0.7163782}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -26185,7 +26185,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 5.026581, y: 1.563098}
   m_EdgeRadius: 0
 --- !u!1 &1993188738
 GameObject:
@@ -26474,9 +26474,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2036557385}
   - component: {fileID: 2036557386}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (21)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26508,7 +26508,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.1731644, y: -3.4259295}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -26519,7 +26519,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0741196, y: 5.5901785}
   m_EdgeRadius: 0
 --- !u!1 &2053471533
 GameObject:
@@ -26836,9 +26836,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2081740608}
   - component: {fileID: 2081740609}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (54)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26870,7 +26870,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.2431335, y: -2.6293142}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -26881,7 +26881,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 9.022705, y: 7.561522}
   m_EdgeRadius: 0
 --- !u!1 &2088059118
 GameObject:
@@ -26893,9 +26893,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2088059119}
   - component: {fileID: 2088059120}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (20)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26927,7 +26927,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.882947, y: -0.8033438}
+  m_Offset: {x: 2.882946, y: -2.433774}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -26938,7 +26938,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.765894, y: 2.6066875}
+  m_Size: {x: 2.0067978, y: 5.5590878}
   m_EdgeRadius: 0
 --- !u!1 &2118424031
 GameObject:
@@ -27188,9 +27188,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2130050620}
   - component: {fileID: 2130050621}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (8)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27378,9 +27378,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2145196792}
   - component: {fileID: 2145196793}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WallCollidor (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
