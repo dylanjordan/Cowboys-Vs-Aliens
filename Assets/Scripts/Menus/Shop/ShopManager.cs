@@ -7,16 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class ShopManager : MonoBehaviour
 {
-    Player player;
-
     public int[,] shopItems = new int[4, 4];
     private int coins;
 
     public Text coinsText;
     public GameObject NotEnoughMenu;
     public GameObject CoinsCounter;
-
-    public bool bought = false;
 
     int healthIncrease = 2;
 
@@ -34,9 +30,9 @@ public class ShopManager : MonoBehaviour
         shopItems[1, 3] = 3;
 
         //Price(s)
-        shopItems[2, 1] = 50;
-        shopItems[2, 2] = 50;
-        shopItems[2, 3] = 5;
+        shopItems[2, 1] = 2;
+        shopItems[2, 2] = 0;
+        shopItems[2, 3] = 0;
 
     }
 
@@ -52,49 +48,41 @@ public class ShopManager : MonoBehaviour
             // update coins text
             coinsText.text = CoinCounter.coinAmount.ToString();
         }
-        bought = true;
-    }
-
-    public void NotEnoughCoins()
-    {
-        StartCoroutine(NotEnoughMenuActive());
-    }
-
-    IEnumerator NotEnoughMenuActive()
-    {
-        GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
         if (CoinCounter.coinAmount < shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
-            Debug.Log("You do not have enough coins to buy this!");
-            NotEnoughMenu.SetActive(true);
+            StartCoroutine(NotEnoughMenuActive());
         }
         else if (CoinCounter.coinAmount >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
             NotEnoughMenu.SetActive(false);
         }
-        yield return new WaitForSeconds(1.0f);
+    }
+
+    IEnumerator NotEnoughMenuActive()
+    {
+        GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+
+        Debug.Log("You do not have enough coins to buy this!");
+
+        NotEnoughMenu.SetActive(true);
+
+        yield return new WaitForSeconds(0.9f);
         NotEnoughMenu.SetActive(false);
-    }
-    public void WinGame()
-    {
-        SceneManager.LoadScene("WinGame");
-    }
-
-    IEnumerator GoToWinGame()
-    {
-        Buy();
-        yield return new WaitForSeconds(0.01f);
-        WinGame();
-    }
-
-    public void BuyVictory()
-    {
-        StartCoroutine(GoToWinGame());
     }
 
     public void BuyHealth()
     {
-        player._maxHealth += healthIncrease;
+        Debug.Log("Maximum Health increased by 'x'!");
+    }
+
+    public void BuySpeed()
+    {
+        Debug.Log("Movement Speed Increased by 'x' %!"); // idk wat number so ya
+    }
+
+    public void BuyDamage()
+    {
+        Debug.Log("Attack Damage increased by 'x' %!");
     }
 }
 
