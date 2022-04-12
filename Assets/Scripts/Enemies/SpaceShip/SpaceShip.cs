@@ -16,7 +16,6 @@ public class SpaceShip : MonoBehaviour
 
     public float _enemyHealth = 10.0f;
     public float _enemyMaxHealth = 10.0f;
-    public float _contactDamage = 0.5f;
 
     public int _damageRecieved = 2;
 
