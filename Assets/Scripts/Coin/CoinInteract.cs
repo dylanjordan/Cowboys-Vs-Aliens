@@ -10,6 +10,7 @@ public class CoinInteract : MonoBehaviour
         {
             CoinCounter.coinAmount++;
             Destroy(gameObject);
+            PlayerPrefs.SetInt("coinAmount", CoinCounter.coinAmount);
         }
     }
 }
