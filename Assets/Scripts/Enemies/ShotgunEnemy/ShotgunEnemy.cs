@@ -50,6 +50,10 @@ public class ShotgunEnemy : MonoBehaviour
     private bool _canSeePlayer;
     [Header("Other")]
     private Rigidbody2D _rb;
+    public Animator animator;
+
+    private bool isCurrentlyShooting = false;
+    private bool isWalking = false;
 
     private void Awake()
     {
@@ -64,6 +68,9 @@ public class ShotgunEnemy : MonoBehaviour
     private void Update()
     {
         UpdateShooter();
+
+        animator.SetBool("isShooting", isCurrentlyShooting);
+        animator.SetBool("isWalking", isWalking);
     }
 
     private void FixedUpdate()
@@ -78,6 +85,7 @@ public class ShotgunEnemy : MonoBehaviour
         }
         if (_canSeePlayer && _canAttack)
         {
+            isWalking = false;
             StartCoroutine(Shoot());
         }
         if (_canSeePlayer)
@@ -120,6 +128,7 @@ public class ShotgunEnemy : MonoBehaviour
 
     void Patrolling()
     {
+        isWalking = true;
         if (!checkingGround || checkingWall)
         {
             if (_facingRight)
@@ -151,10 +160,11 @@ public class ShotgunEnemy : MonoBehaviour
     IEnumerator Shoot()
     {
         _canAttack = false;
-        yield return new WaitForSeconds(_attackRate);
+        isCurrentlyShooting = true;
         GameObject newBullet = Instantiate(_bulletPrefab, _firingPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-
         newBullet.GetComponent<Rigidbody2D>().velocity = (_player.position - transform.position).normalized * _bulletSpeed;
+        yield return new WaitForSeconds(_attackRate);
+        isCurrentlyShooting = false;
         _canAttack = true;
     }
     void Flip()
