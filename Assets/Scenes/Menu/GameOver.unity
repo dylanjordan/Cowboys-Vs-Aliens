@@ -657,9 +657,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 442840453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1fe1fd56e3768a4c9a7510958e58826, type: 3}
+  m_Script: {fileID: 11500000, guid: 29cfc9a9a70c8d74bb373ebb9c7881bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousScene: 0
 --- !u!1 &446499841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,7 +1493,7 @@ GameObject:
   - component: {fileID: 1633811533}
   - component: {fileID: 1633811532}
   m_Layer: 5
-  m_Name: TownButton
+  m_Name: ReplayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1563,8 +1564,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 442840459}
-        m_TargetAssemblyTypeName: ToTown, Assembly-CSharp
-        m_MethodName: BackToTown
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: LevelLost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2287,7 +2288,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Town
+  m_text: Replay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
