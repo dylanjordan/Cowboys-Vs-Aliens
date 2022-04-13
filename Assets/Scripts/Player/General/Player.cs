@@ -32,8 +32,6 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
-            UnityEngine.Cursor.visible = true;
-            Debug.Log("Game Over");
         }
     }
 

@@ -7,18 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     public bool newGame;
 
-    public float defaultHealth = 4.0f;
-    public int defaultCoins = 0;
-    public int defaultSpeed = 15;
-
    public void PlayGame()
     {
         SceneManager.LoadScene("Level1");
-
-        PlayerPrefs.SetFloat("_maxHealth", defaultHealth);
-        PlayerPrefs.SetInt("coinAmount", defaultCoins);
-        PlayerPrefs.SetInt("maxSpeed", defaultSpeed);
-
         newGame = true;
     }
 
