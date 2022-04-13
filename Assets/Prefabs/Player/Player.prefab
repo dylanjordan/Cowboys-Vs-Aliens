@@ -235,7 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3549337190964083168}
   playerArm: {fileID: 3549337191839300654}
-  speed: 10
+  speed: 20
   jumpForce: 26
   maxSpeed: 20
   jumpableGround:
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095bad2847a306e458caeca36b2d3450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 4
+  _maxHealth: 6
   _currentHealth: 0
   healthBar: {fileID: 0}
 --- !u!1 &3549337191115832259

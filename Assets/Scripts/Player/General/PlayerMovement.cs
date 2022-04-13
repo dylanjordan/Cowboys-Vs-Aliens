@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool CanMove = true;
 
+    public float deathHeight = -12;
+
     //Can enter a shop
     private bool canEnterShop = false;
     private bool shopInput = false;
@@ -98,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
 
-        if(trans.position.y <= -12)
+        if(trans.position.y <= deathHeight)
         {
             FindObjectOfType<Player>()._currentHealth = 0;
         }
