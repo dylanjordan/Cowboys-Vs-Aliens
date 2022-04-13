@@ -33,12 +33,14 @@ public class JumpEnemy : MonoBehaviour
     private bool checkingGround;
     private bool checkingWall;
     private bool _isJumping = false;
+
     [Header("For Jump Attack")]
     [SerializeField] float _jumpheight;
     [SerializeField] Transform _player;
     [SerializeField] Transform AttackGroundCheck;
     [SerializeField] Vector2 boxSize;
     [SerializeField] float _attackRate;
+    public AudioClip jumpNoise;
 
     private bool _isGrounded;
     private bool _canAttack = true;
@@ -158,6 +160,7 @@ public class JumpEnemy : MonoBehaviour
         if (_isGrounded)
         {
             _rb.AddForce(new Vector2(distFromPlayer, _jumpheight), ForceMode2D.Impulse);
+            AudioSource.PlayClipAtPoint(jumpNoise, transform.position);
         }
     }
 

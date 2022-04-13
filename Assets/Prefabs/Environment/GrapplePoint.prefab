@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009112179, y: -0.0010224357}
+  m_Offset: {x: -0.000015720725, y: -0.01023221}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3985716, y: 0.42013198}
+  m_Size: {x: 0.49052987, y: 0.5334554}
   m_EdgeRadius: 0
 --- !u!50 &7763488456063709013
 Rigidbody2D:
@@ -149,6 +149,7 @@ MonoBehaviour:
   colorBase: {r: 1, g: 1, b: 1, a: 1}
   player: {fileID: 0}
   _lineRenderer: {fileID: -7502546406971634533}
+  grappleNoise: {fileID: 8300000, guid: e626b3c3d949d854fbcd0ab630a97410, type: 3}
 --- !u!120 &-7502546406971634533
 LineRenderer:
   m_ObjectHideFlags: 0

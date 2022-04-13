@@ -15,6 +15,8 @@ public class GrappleBlock : MonoBehaviour
 
     public LineRenderer _lineRenderer;
 
+    public AudioClip grappleNoise;
+
     public void Start()
     {
         playerSpring = GameObject.FindGameObjectWithTag("Player").GetComponent<SpringJoint2D>();
@@ -51,6 +53,7 @@ public class GrappleBlock : MonoBehaviour
             _lineRenderer.enabled = true;
             playerSpring.distance = Vector2.Distance(gameObject.transform.position, player.transform.position);
             playerSpring.connectedBody = GetComponent<Rigidbody2D>();
+            AudioSource.PlayClipAtPoint(grappleNoise, transform.position);
         }
         if (Input.GetMouseButtonUp(1))
         {

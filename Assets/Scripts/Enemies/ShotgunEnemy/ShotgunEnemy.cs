@@ -35,6 +35,8 @@ public class ShotgunEnemy : MonoBehaviour
     [SerializeField] Transform _player;
     [SerializeField] Transform _firingPoint;
     [SerializeField] float _attackRate;
+    public AudioClip shootAudio;
+    public float _rotation;
 
     [SerializeField] GameObject _bulletPrefab;
 
@@ -161,8 +163,12 @@ public class ShotgunEnemy : MonoBehaviour
     {
         _canAttack = false;
         isCurrentlyShooting = true;
+        Vector3 angle = _player.transform.position - transform.position;
+        _rotation = Mathf.Atan2(angle.y, angle.x) * Mathf.Rad2Deg;
         GameObject newBullet = Instantiate(_bulletPrefab, _firingPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
         newBullet.GetComponent<Rigidbody2D>().velocity = (_player.position - transform.position).normalized * _bulletSpeed;
+        newBullet.transform.rotation = Quaternion.Euler(0.0f, 0.0f, _rotation);
+        AudioSource.PlayClipAtPoint(shootAudio, transform.position);
         yield return new WaitForSeconds(_attackRate);
         isCurrentlyShooting = false;
         _canAttack = true;
