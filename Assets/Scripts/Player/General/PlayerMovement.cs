@@ -35,6 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float playerGravity = 7f;
 
+    //Audio
+    public AudioClip jumpNoise;
+
 
     // Start is called before the first frame update
     void Start()
@@ -151,6 +154,7 @@ public class PlayerMovement : MonoBehaviour
     {
         body.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         jumpInput = true;
+        PlaySound(jumpNoise);
     }
 
     public float GetSpeed()
@@ -188,5 +192,10 @@ public class PlayerMovement : MonoBehaviour
         {
             canEnterShop = false;
         }
+    }
+
+    public void PlaySound(AudioClip noise)
+    {
+        AudioSource.PlayClipAtPoint(noise, transform.position);
     }
 }

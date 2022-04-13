@@ -241,6 +241,7 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 128
+  jumpNoise: {fileID: 8300000, guid: 36dc74259d0c7834fbb3d48ed995ebad, type: 3}
 --- !u!114 &3549337190964083179
 MonoBehaviour:
   m_ObjectHideFlags: 0
