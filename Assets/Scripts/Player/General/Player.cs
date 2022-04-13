@@ -17,17 +17,13 @@ public class Player : MonoBehaviour
     {
         _currentHealth = _maxHealth;
         healthBar.SetMaxHealth(_currentHealth);
-    }
-    private void Start()
-    {
-        _maxHealth = PlayerPrefs.GetFloat("_maxHealth");
+        FindObjectOfType<GameOver>().previousScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
     void Update()
     {
         Die();
-        Debug.Log(_maxHealth);
     }
 
     private void Die()

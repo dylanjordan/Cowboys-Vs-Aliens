@@ -5,29 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    // mainly placeholder, just want to get the endgame scene in
-    // will change to trigger by player death later
-    void Update()
+    public int previousScene;
+    public int currentLevel;
+ 
+    public void LevelLost()
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            SceneManager.LoadScene("GameOver");
-            UnityEngine.Cursor.visible = true;
-            Debug.Log("Game Over");
-        }
-        else
-        {
-            Time.timeScale = 1.0f;
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            SceneManager.LoadScene("WinGame");
-            UnityEngine.Cursor.visible = true;
-            Debug.Log("YouWin");
-        }
-        else
-        {
-            Time.timeScale = 1.0f;
-        }
+        SceneManager.LoadScene(previousScene);
+    }
+
+    public void LevelWon()
+    {
+        SceneManager.LoadScene(currentLevel + 1);
     }
 }
