@@ -428,6 +428,7 @@ MonoBehaviour:
   AttackGroundCheck: {fileID: 2123345812453053137}
   boxSize: {x: 2.5, y: 0.16}
   _attackRate: 2
+  jumpNoise: {fileID: 8300000, guid: bbda85c98b8683b4c911e192059887b2, type: 3}
   lineOfSite: {x: 9.56, y: 3.25}
   playerLayer:
     serializedVersion: 2

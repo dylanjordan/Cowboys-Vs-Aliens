@@ -3,7 +3,17 @@ guid: 29cca17133281524781075a53d1e16b4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _healthBarControl: {instanceID: 0}
+  - _healthBar: {instanceID: 0}
+  - _hitParticles: {instanceID: 0}
+  - groundCheck: {instanceID: 0}
+  - wallCheck: {instanceID: 0}
+  - _player: {instanceID: 0}
+  - _firingPoint: {instanceID: 0}
+  - shootAudio: {fileID: 8300000, guid: 5521d24b2a802a54b9c9ba7cb46c9585, type: 3}
+  - _bulletPrefab: {instanceID: 0}
+  - animator: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

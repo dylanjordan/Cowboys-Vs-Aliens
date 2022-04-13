@@ -480,6 +480,7 @@ MonoBehaviour:
   _shootSpeed: 15
   _timeBeforeNextShot: 0.95
   _contactDamage: 1
+  shootAudio: {fileID: 8300000, guid: 5521d24b2a802a54b9c9ba7cb46c9585, type: 3}
   _UpdatePathRate: 0.5
   _distanceVal: 5
 --- !u!114 &6977617453669792052
@@ -501,8 +502,8 @@ MonoBehaviour:
   _enemyPolyCollider: {fileID: 6977617453669792042}
   _enemyHealth: 10
   _enemyMaxHealth: 10
-  _contactDamage: 0.5
   _damageRecieved: 2
+  popUpMessage: {fileID: 0}
 --- !u!50 &6977617453669792043
 Rigidbody2D:
   serializedVersion: 4
