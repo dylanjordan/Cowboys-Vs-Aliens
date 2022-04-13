@@ -413,6 +413,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34727302}
   m_CullTransparentMesh: 1
+--- !u!1001 &657600684
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367213, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679569612728367215, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
+      propertyPath: m_Name
+      value: Cursor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65b584d72582a00418e71408ead1a2d8, type: 3}
 --- !u!1 &659535376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,8 +2010,8 @@ Canvas:
   m_GameObject: {fileID: 1420334640}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1513104417}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2313,6 +2370,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGame: 0
+  defaultHealth: 4
+  defaultCoins: 0
+  defaultSpeed: 15
 --- !u!114 &1612922786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2362,8 +2422,8 @@ Canvas:
   m_GameObject: {fileID: 1612922784}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1513104417}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2966,7 +3026,6 @@ GameObject:
   - component: {fileID: 1966560380}
   - component: {fileID: 1966560379}
   - component: {fileID: 1966560378}
-  - component: {fileID: 1966560377}
   m_Layer: 5
   m_Name: WinGameMenu
   m_TagString: Untagged
@@ -2974,18 +3033,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1966560377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966560376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1fe1fd56e3768a4c9a7510958e58826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1966560378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3051,8 +3098,8 @@ Canvas:
   m_GameObject: {fileID: 1966560376}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1513104417}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

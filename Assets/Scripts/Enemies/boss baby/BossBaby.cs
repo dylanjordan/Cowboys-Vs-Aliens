@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.SceneManagement;
 
 public class BossBaby : MonoBehaviour
 {
@@ -193,6 +194,7 @@ public class BossBaby : MonoBehaviour
         if (CheckIfDead())
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("WinGame");
         }
     }
 
