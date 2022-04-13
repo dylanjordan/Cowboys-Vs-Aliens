@@ -67270,7 +67270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c5ef93274c9f342a16d3cc56c766b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 12
+  sceneToLoad: 13
 --- !u!61 &1680668122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68610,7 +68610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c5ef93274c9f342a16d3cc56c766b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 12
+  sceneToLoad: 13
 --- !u!61 &1876007789
 BoxCollider2D:
   m_ObjectHideFlags: 0

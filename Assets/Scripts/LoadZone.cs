@@ -14,4 +14,9 @@ public class LoadZone : MonoBehaviour
             SceneManager.LoadScene(sceneToLoad);
         }
     }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(sceneToLoad);
+    }
 }
