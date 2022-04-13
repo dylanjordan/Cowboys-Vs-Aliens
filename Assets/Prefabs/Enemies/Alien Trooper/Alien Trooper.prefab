@@ -209,6 +209,8 @@ MonoBehaviour:
   _player: {fileID: 0}
   _firingPoint: {fileID: 2226604877111254849}
   _attackRate: 2
+  shootAudio: {fileID: 8300000, guid: 5521d24b2a802a54b9c9ba7cb46c9585, type: 3}
+  _rotation: 0
   _bulletPrefab: {fileID: 5745524326499279562, guid: d4f507569ac6b1745b9635099f240946, type: 3}
   _numBullets: 3
   _spreadAngle: 2

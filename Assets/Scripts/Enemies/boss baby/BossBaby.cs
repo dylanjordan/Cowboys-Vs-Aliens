@@ -56,6 +56,8 @@ public class BossBaby : MonoBehaviour
     [Header("Other")]
     public PolygonCollider2D _enemyPolyCollider;
     public Animator animator;
+    public AudioClip winNoise;
+    public AudioClip shootAudio;
 
     public void Awake()
     {
@@ -170,6 +172,7 @@ public class BossBaby : MonoBehaviour
         canShoot = false;
         yield return new WaitForSeconds(_timeBeforeNextShot);
         GameObject newBullet = Instantiate(_bulletPrefab, shootPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+        AudioSource.PlayClipAtPoint(shootAudio, transform.position);
 
         newBullet.GetComponent<Rigidbody2D>().velocity = (_playerModel.position - transform.position).normalized * _shootSpeed;
         canShoot = true;
@@ -193,11 +196,17 @@ public class BossBaby : MonoBehaviour
     {
         if (CheckIfDead())
         {
-            Destroy(gameObject);
+            StartCoroutine(Win());
             SceneManager.LoadScene("WinGame");
         }
     }
 
+    private IEnumerator Win()
+    {
+        AudioSource.PlayClipAtPoint(winNoise, transform.position);
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
+    }
     private bool CheckIfDead()
     {
         if (_enemyHealth <= 0.0f)
@@ -267,5 +276,4 @@ public class BossBaby : MonoBehaviour
         _isFacingRight = !_isFacingRight;
         transform.Rotate(0, 180, 0);
     }
-
 }

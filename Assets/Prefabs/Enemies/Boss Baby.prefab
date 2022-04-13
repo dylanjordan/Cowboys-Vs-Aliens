@@ -282,6 +282,8 @@ MonoBehaviour:
   _timeBeforeNextShot: 2
   _enemyPolyCollider: {fileID: 2456809931077432211}
   animator: {fileID: 2456809931077432212}
+  winNoise: {fileID: 8300000, guid: 51707aa505f05354a85e63f450794c30, type: 3}
+  shootAudio: {fileID: 8300000, guid: 5521d24b2a802a54b9c9ba7cb46c9585, type: 3}
 --- !u!95 &2456809931077432212
 Animator:
   serializedVersion: 3
