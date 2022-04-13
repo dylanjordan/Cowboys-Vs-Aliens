@@ -16,13 +16,13 @@ public class ShopManager : MonoBehaviour
 
     bool bought = false;
 
-    int playerMaxHealth;
+    public float playerMaxHealth;
     int healthIncrease = 500;
 
     int playerDamage;
     int damageIncrease = 1000;
 
-    int playerSpeed;
+    float playerSpeed;
     int speedIncrease = 2000;
 
     // Start is called before the first frame update
@@ -39,7 +39,7 @@ public class ShopManager : MonoBehaviour
         shopItems[1, 3] = 3;
 
         //Price(s)
-        shopItems[2, 1] = 2;
+        shopItems[2, 1] = 0;
         shopItems[2, 2] = 0;
         shopItems[2, 3] = 0;
 
@@ -49,7 +49,7 @@ public class ShopManager : MonoBehaviour
     {
         playerMaxHealth = PlayerPrefs.GetInt("_maxHealth");
         playerDamage = PlayerPrefs.GetInt("_bulletDamage");
-        playerSpeed = PlayerPrefs.GetInt("maxSpeed");
+        playerSpeed = PlayerPrefs.GetFloat("maxSpeed");
     }
 
     public void Buy()
@@ -110,7 +110,7 @@ public class ShopManager : MonoBehaviour
     void GainHealth()
     {
         playerMaxHealth += healthIncrease;
-        PlayerPrefs.SetInt("_maxHealth", playerMaxHealth);
+        PlayerPrefs.SetFloat("_maxHealth", playerMaxHealth);
     }
 
     void GainDamage()
@@ -121,7 +121,7 @@ public class ShopManager : MonoBehaviour
     void GainSpeed()
     {
         playerSpeed += speedIncrease;
-        PlayerPrefs.SetInt("maxSpeed", playerSpeed);
+        PlayerPrefs.SetFloat("maxSpeed", playerSpeed);
     }
 }
 

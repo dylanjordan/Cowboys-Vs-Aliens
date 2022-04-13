@@ -16,13 +16,18 @@ public class Player : MonoBehaviour
     void Awake()
     {
         _currentHealth = _maxHealth;
-        healthBar.SetMaxHealth(_maxHealth);
+        healthBar.SetMaxHealth(_currentHealth);
+    }
+    private void Start()
+    {
+        _maxHealth = PlayerPrefs.GetFloat("_maxHealth");
     }
 
     // Update is called once per frame
     void Update()
     {
         Die();
+        Debug.Log(_maxHealth);
     }
 
     private void Die()
@@ -43,16 +48,6 @@ public class Player : MonoBehaviour
         Debug.Log("Player's current health is " + _currentHealth);
     }
 
-    //make player take damage
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            TakeDamage(1);
-        }
-    }
-
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
@@ -63,6 +58,7 @@ public class Player : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer();
         _currentHealth = data.health;
         CoinCounter.coinAmount = data.coins;
+        FindObjectOfType<PlayerMovement>().maxSpeed = data.newSpeed;
 
         Vector3 position;
         position.x = data.position[0];

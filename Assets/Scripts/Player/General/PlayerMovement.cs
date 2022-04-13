@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     //Movement speed and jump force
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
-    [SerializeField] float maxSpeed;
+    public float maxSpeed;
     [SerializeField] private LayerMask jumpableGround;
 
     private BoxCollider2D _coll;
