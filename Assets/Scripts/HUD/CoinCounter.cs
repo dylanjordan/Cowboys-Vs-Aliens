@@ -10,6 +10,7 @@ public class CoinCounter : MonoBehaviour
 
     private void Start()
     {
+
         text = GetComponent<Text>();
     }
 
