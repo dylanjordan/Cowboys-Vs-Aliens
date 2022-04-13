@@ -17,7 +17,8 @@ public class Player : MonoBehaviour
     {
         _currentHealth = _maxHealth;
         healthBar.SetMaxHealth(_currentHealth);
-        FindObjectOfType<GameOver>().previousScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.GetActiveScene();
+        PlayerPrefs.SetInt("previousScene", SceneManager.GetActiveScene().buildIndex);
     }
 
     // Update is called once per frame

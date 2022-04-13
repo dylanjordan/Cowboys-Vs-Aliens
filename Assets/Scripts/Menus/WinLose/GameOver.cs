@@ -6,15 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public int previousScene;
-    public int currentLevel;
- 
-    public void LevelLost()
+
+    private void Awake()
     {
-        SceneManager.LoadScene(previousScene);
+        PlayerPrefs.GetInt("previousScene");
     }
 
-    public void LevelWon()
+    public void LevelLost()
     {
-        SceneManager.LoadScene(currentLevel + 1);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("previousScene"));
     }
 }
