@@ -70,11 +70,12 @@ public class PlayerMovement : MonoBehaviour
                 shopInput = false;
             }
 
-            if (runInput == 0 && body.velocity.y == 0)
+            if (runInput != 1 && body.velocity.y == 0)
             {
                 isWalking = false;
                 body.drag = 10;
             }
+
             else
             {
                 body.drag = 2;
@@ -99,8 +100,6 @@ public class PlayerMovement : MonoBehaviour
         {
             FindObjectOfType<Player>()._currentHealth = 0;
         }
-
-        Debug.Log(runInput);
 
         animator.SetBool("IsWalking", isWalking);
         animator.SetBool("IsJumping", isJumping);
