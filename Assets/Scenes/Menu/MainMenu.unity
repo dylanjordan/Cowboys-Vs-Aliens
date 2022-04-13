@@ -3178,7 +3178,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1028981606}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3675,6 +3675,7 @@ RectTransform:
   - {fileID: 568474042}
   - {fileID: 656078408}
   - {fileID: 1043588403}
+  - {fileID: 1341360046}
   - {fileID: 848748447}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -4515,6 +4516,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251100428}
   m_CullTransparentMesh: 1
+--- !u!1001 &1301045397
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 249
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.33268434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773670, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_Name
+      value: Beta Canvas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
 --- !u!1 &1341360045
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,7 +4652,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1369865534

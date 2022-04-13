@@ -36018,6 +36018,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2059836110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 249
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.33268434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773669, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414137221987773670, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
+      propertyPath: m_Name
+      value: Beta Canvas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c5f68fa9e270bf74fa10281067b8a185, type: 3}
 --- !u!1 &2061405940
 GameObject:
   m_ObjectHideFlags: 0
